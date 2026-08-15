@@ -230,11 +230,13 @@
   /* ---------- team ---------- */
   .team-grid { display: grid; gap: clamp(1.6rem, 4vw, 3rem); grid-template-columns: 1fr; }
   @media (min-width: 880px) { .team-grid { grid-template-columns: .9fr 1.1fr; align-items: start; } }
-  .portrait-frame {
-    aspect-ratio: 4 / 5; border: 1px dashed var(--line-strong); background: var(--surface-2);
-    display: flex; align-items: center; justify-content: center; text-align: center;
-    color: var(--ink-3); font-size: .9rem; padding: 1.5rem;
-  }
+  .portrait { width: 100%; height: auto; display: block; box-shadow: var(--shadow); }
+  .team-people { display: grid; gap: 1.15rem; grid-template-columns: repeat(2, 1fr); margin-top: clamp(2rem, 4vw, 2.8rem); }
+  @media (min-width: 720px) { .team-people { grid-template-columns: repeat(5, 1fr); } }
+  .person { display: flex; flex-direction: column; gap: .45rem; }
+  .person img { width: 100%; aspect-ratio: 13 / 16; object-fit: cover; display: block; }
+  .person b { font-size: .98rem; }
+  .person span { font-size: .82rem; color: var(--ink-3); }
   .team-copy { display: flex; flex-direction: column; gap: 1.1rem; }
   .team-copy p { color: var(--ink-2); }
   .badges { display: flex; flex-wrap: wrap; gap: .45rem; margin: 0; padding: 0; list-style: none; }
@@ -686,9 +688,7 @@
   <!-- TEAM -->
   <section id="zespol">
     <div class="wrap team-grid">
-      <div class="portrait-frame">
-        <span><b>Miejsce na portret Katarzyny Bukowskiej</b><br><span class="todo">do uzupełnienia</span><br>sesja zdjęciowa do umówienia — wnętrze, zespół, portret właścicielki</span>
-      </div>
+      <img class="portrait" src="assets/kasia.jpg" alt="Katarzyna Bukowska, właścicielka Laser Clinic w Radomiu" width="900" height="1125" loading="lazy">
       <div class="team-copy">
         <p class="eyebrow">Zespół</p>
         <h2>Kto będzie się Tobą zajmować</h2>
@@ -711,6 +711,15 @@
           <li><b>LPG Integral</b><span>endermologia</span></li>
         </ul>
         <p style="font-size:.9rem;color:var(--ink-3)">Chętnie pokażemy Ci certyfikaty i&nbsp;urządzenia na miejscu — zapytaj podczas konsultacji.</p>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="team-people">
+        <figure class="person" style="margin:0"><img src="assets/anna.jpg" alt="Anna, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"><b>Anna</b><span>kosmetolożka</span></figure>
+        <figure class="person" style="margin:0"><img src="assets/magdalena.jpg" alt="Magdalena, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"><b>Magdalena</b><span>kosmetolożka</span></figure>
+        <figure class="person" style="margin:0"><img src="assets/alicja.jpg" alt="Alicja, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"><b>Alicja</b><span>kosmetolożka</span></figure>
+        <figure class="person" style="margin:0"><img src="assets/wioleta.jpg" alt="Wioleta, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"><b>Wioleta</b><span>kosmetolożka</span></figure>
+        <figure class="person" style="margin:0"><img src="assets/edyta.jpg" alt="Edyta, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"><b>Edyta</b><span>kosmetolożka</span></figure>
       </div>
     </div>
   </section>
