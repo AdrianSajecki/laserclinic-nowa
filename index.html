@@ -275,12 +275,9 @@
   /* ---------- effects ---------- */
   .fx-grid { display: grid; gap: 1.15rem; grid-template-columns: 1fr; }
   @media (min-width: 720px) { .fx-grid { grid-template-columns: repeat(3, 1fr); } }
-  .fx-frame {
-    aspect-ratio: 1 / 1; border: 1px dashed var(--line-strong); background: var(--surface);
-    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .4rem;
-    text-align: center; color: var(--ink-3); font-size: .88rem; padding: 1.2rem;
-  }
-  .fx-frame b { color: var(--ink-2); font-size: .95rem; }
+  .fx-item { margin: 0; display: flex; flex-direction: column; gap: .55rem; }
+  .fx-item img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; box-shadow: var(--shadow); }
+  .fx-item figcaption { font-size: .85rem; color: var(--ink-2); }
   .fx-note { margin-top: 1.15rem; font-size: .88rem; color: var(--ink-3); max-width: none; }
 
   /* ---------- pricing table ---------- */
@@ -786,12 +783,13 @@
       <div class="section-head">
         <p class="eyebrow">Efekty</p>
         <h2>Efekty naszych klientek</h2>
-        <p class="section-lead">Zdjęcia przed i&nbsp;po pochodzą z&nbsp;naszego gabinetu i&nbsp;pokazują rzeczywiste klientki. Publikujemy je wyłącznie za pisemną zgodą.</p>
+        <p class="section-lead">Zdjęcia pochodzą z&nbsp;naszego gabinetu i&nbsp;pokazują rzeczywiste klientki oraz efekty naszej pracy. Publikujemy je wyłącznie za zgodą.</p>
       </div>
       <div class="fx-grid">
-        <div class="fx-frame"><b>RFrax Lift</b><span class="todo">do uzupełnienia</span><span>para zdjęć przed / po z&nbsp;Instagrama</span></div>
-        <div class="fx-frame"><b>Depilacja laserowa</b><span class="todo">do uzupełnienia</span><span>para zdjęć przed / po z&nbsp;Instagrama</span></div>
-        <div class="fx-frame"><b>Makijaż permanentny</b><span class="todo">do uzupełnienia</span><span>para zdjęć przed / po z&nbsp;Instagrama</span></div>
+        <!-- do uzupełnienia: pary przed/po dla depilacji laserowej i RFrax od Kasi -->
+        <figure class="fx-item"><img src="assets/efekt1.jpg" alt="Lifting powiek Plazma ARC w Laser Clinic Radom, zdjęcia przed i po zabiegu" width="720" height="900" loading="lazy"><figcaption>Lifting powiek Plazma ARC, zdjęcia przed i&nbsp;po</figcaption></figure>
+        <figure class="fx-item"><img src="assets/efekt2.jpg" alt="Makijaż permanentny ust w Laser Clinic Radom, efekt po zabiegu" width="720" height="900" loading="lazy"><figcaption>Makijaż permanentny ust</figcaption></figure>
+        <figure class="fx-item"><img src="assets/efekt3.jpg" alt="Naturalny efekt makijażu permanentnego ust u klientki Laser Clinic Radom" width="720" height="900" loading="lazy"><figcaption>Makijaż permanentny ust u&nbsp;naszej klientki</figcaption></figure>
       </div>
       <p class="fx-note">Efekty zabiegów są indywidualne i&nbsp;zależą od skóry, liczby zabiegów oraz pielęgnacji. Więcej metamorfoz znajdziesz na naszym Instagramie: <a href="https://www.instagram.com/laserclinicradom/" rel="noopener" target="_blank" style="color:var(--accent-deep)">@laserclinicradom</a>.</p>
     </div>
