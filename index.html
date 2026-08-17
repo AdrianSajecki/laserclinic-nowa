@@ -444,12 +444,16 @@
   @media (max-width: 720px) { body { padding-bottom: 3.6rem; } }
 
   /* ---------- call dialog (desktop) ---------- */
-  .call-dialog { border: 0; padding: clamp(1.6rem, 3vw, 2.4rem); max-width: 440px; width: calc(100% - 2rem); background: var(--surface); color: var(--ink); box-shadow: 0 30px 80px -20px rgba(36,20,29,.35); border-top: 4px solid var(--accent); }
+  .call-dialog { position: relative; border: 0; padding: clamp(2rem, 4vw, 2.8rem) clamp(1.5rem, 3vw, 2.4rem) clamp(1.8rem, 3vw, 2.4rem); max-width: 460px; width: calc(100% - 2rem); background: var(--surface); color: var(--ink); text-align: center; box-shadow: 0 30px 80px -20px rgba(36,20,29,.35); border-top: 4px solid var(--accent); }
   .call-dialog::backdrop { background: rgba(36,20,29,.45); }
-  .call-dialog h3 { margin: .35rem 0 .8rem; }
-  .call-number { display: block; font-family: var(--font-display); font-size: 2.2rem; color: var(--accent-deep); text-decoration: none; margin-bottom: .3rem; }
-  .call-dialog p { color: var(--ink-2); font-size: .95rem; margin-bottom: 1.2rem; }
-  .call-dialog .hero-cta { margin-top: .4rem; }
+  .call-dialog .eyebrow { justify-content: center; }
+  .call-dialog h3 { margin: .4rem 0 1rem; font-size: 1.5rem; }
+  .call-number { font-family: var(--font-display); font-size: clamp(2.2rem, 6vw, 2.8rem); color: var(--accent-deep); margin: 0 0 .25rem; letter-spacing: .02em; outline: none; max-width: none; }
+  .call-hours { color: var(--ink-2); font-size: .95rem; margin: 0 0 1.4rem; max-width: none; }
+  .call-actions { display: flex; flex-direction: column; gap: .7rem; align-items: stretch; }
+  .call-actions .btn { width: 100%; }
+  .call-close { position: absolute; top: .6rem; right: .7rem; width: 36px; height: 36px; border: 0; background: transparent; color: var(--ink-3); font-size: 1.6rem; line-height: 1; cursor: pointer; border-radius: 50%; }
+  .call-close:hover { background: var(--surface-2); color: var(--ink); }
 
   /* ---------- todo marker ---------- */
   .todo {
@@ -1612,14 +1616,15 @@
   </div>
 </footer>
 
-<dialog class="call-dialog" id="call-dialog">
+<dialog class="call-dialog" id="call-dialog" aria-labelledby="call-dialog-title">
+  <button class="call-close" type="button" id="call-dialog-close" aria-label="Zamknij">×</button>
   <p class="eyebrow">Bezpłatna konsultacja</p>
-  <h3>Zadzwoń do recepcji</h3>
-  <a class="call-number num" href="tel:+48483121551">48 312 15 51</a>
-  <p id="call-dialog-hours">pn–pt 8:00–20:00, sob 8:00–15:00</p>
-  <div class="hero-cta">
-    <a class="btn btn-primary" href="#callback-form" id="call-dialog-form">Zostaw numer, oddzwonimy</a>
-    <button class="btn btn-ghost" type="button" id="call-dialog-close">Zamknij</button>
+  <h3 id="call-dialog-title">Zadzwoń do recepcji</h3>
+  <p class="call-number num" tabindex="-1">48 312 15 51</p>
+  <p class="call-hours" id="call-dialog-hours">pn–pt 8:00–20:00, sob 8:00–15:00</p>
+  <div class="call-actions">
+    <a class="btn btn-primary num" href="tel:+48483121551" id="call-dialog-tel">Zadzwoń: 48 312 15 51</a>
+    <a class="btn btn-ghost" href="#callback-form" id="call-dialog-form">Zostaw numer, oddzwonimy</a>
   </div>
 </dialog>
 
@@ -1718,6 +1723,9 @@
     });
     document.getElementById("call-dialog-close").addEventListener("click", () => dlg.close());
     document.getElementById("call-dialog-form").addEventListener("click", () => dlg.close());
+    dlg.addEventListener("close", () => {});
+    const origShow = dlg.showModal.bind(dlg);
+    dlg.showModal = () => { origShow(); const b = document.getElementById("call-dialog-tel"); if (b) b.focus(); };
     dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
     const now = new Date(); const d = now.getDay(); const h = now.getHours() + now.getMinutes() / 60;
     const open = (d >= 1 && d <= 5 && h >= 8 && h < 20) || (d === 6 && h >= 8 && h < 15);
