@@ -353,11 +353,9 @@
   .team-grid { display: grid; gap: clamp(1.6rem, 4vw, 3rem); grid-template-columns: 1fr; }
   @media (min-width: 880px) { .team-grid { grid-template-columns: .9fr 1.1fr; align-items: start; } }
   .portrait-wrap { position: relative; }
-  .portrait-wrap::before { content: ""; position: absolute; inset: 16px -16px -16px 16px; border: 1px solid var(--gold); pointer-events: none; z-index: 0; }
-  @media (max-width: 879px) { .portrait-wrap::before { inset: 12px -12px -12px 12px; } }
   @media (min-width: 880px) { .portrait-wrap { position: sticky; top: 96px; } }
-  .portrait { position: relative; z-index: 1; width: 100%; height: auto; aspect-ratio: 5 / 6; object-fit: cover; object-position: 50% 22%; display: block; box-shadow: var(--shadow); }
-  @media (max-width: 719px) { .portrait { max-height: 46vh; object-position: 50% 8%; } }
+  .portrait { position: relative; z-index: 1; width: 100%; height: auto; aspect-ratio: 5 / 6; object-fit: cover; object-position: 50% 30%; display: block; box-shadow: var(--shadow); }
+  @media (max-width: 719px) { .portrait { max-height: 46vh; object-position: 50% 15%; } }
   .team-people { display: grid; gap: 1.15rem; grid-template-columns: repeat(2, 1fr); margin-top: clamp(2rem, 4vw, 2.8rem); }
   @media (min-width: 720px) { .team-people { grid-template-columns: repeat(3, minmax(0, 260px)); justify-content: start; } }
   @media (min-width: 880px) { .team-people { grid-template-columns: repeat(3, 1fr); } }
@@ -1065,7 +1063,7 @@
   <hr class="laser-rule" aria-hidden="true">
   <section id="zespol">
     <div class="wrap team-grid">
-      <div class="portrait-wrap" data-reveal><picture><source type="image/webp" srcset="assets/kasia-2.webp"><img class="portrait" src="assets/kasia-2.jpg" alt="Katarzyna Bukowska, właścicielka Laser Clinic w Radomiu, kosmetolożka" width="900" height="1125" loading="lazy" decoding="async"></picture></div>
+      <div class="portrait-wrap" data-reveal><picture><source type="image/webp" srcset="assets/kasia-2.webp"><img class="portrait" src="assets/kasia-2.jpg" alt="Katarzyna Bukowska, właścicielka Laser Clinic w Radomiu, kosmetolożka" width="900" height="1080" loading="lazy" decoding="async"></picture></div>
       <div class="team-copy" data-reveal>
         <p class="eyebrow">Zespół</p>
         <h2>Kto będzie się Tobą zajmować</h2>
