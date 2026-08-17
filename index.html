@@ -1508,7 +1508,7 @@
         </dl>
       </div>
       <form class="callback" id="callback-form">
-        <h3>Wolisz, żebyśmy oddzwoniły?</h3>
+        <h3>Piszesz po godzinach albo wolisz, żebyśmy oddzwoniły?</h3>
         <p style="font-size:.8rem;margin:0"><span class="todo">do uzupełnienia</span> wysyłka formularza, podłączymy przy publikacji (backend w&nbsp;EOG)</p>
         <label>Imię
           <input type="text" name="name" autocomplete="given-name" placeholder="np. Anna" required>
@@ -1647,6 +1647,17 @@
       }
     });
   });
+
+  // CTA: na telefonie dzwoni od razu, na komputerze prowadzi do sekcji kontaktu
+  (function () {
+    const mobile = matchMedia("(pointer: coarse)").matches || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (!mobile) return;
+    document.querySelectorAll('a[href="#kontakt"]').forEach(a => {
+      if (a.closest("nav") || a.dataset.cta === "sticky") return; // menu i pasek dolny bez zmian (pasek ma osobny "Zadzwoń")
+      a.setAttribute("href", "tel:+48483121551");
+      a.dataset.ctaMode = "tel";
+    });
+  })();
 
   // Menu mobilne
   const navToggle = document.getElementById("nav-toggle");
