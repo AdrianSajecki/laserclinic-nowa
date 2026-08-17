@@ -13,7 +13,7 @@
 <meta property="og:locale" content="pl_PL">
 <meta property="og:title" content="Laser Clinic Radom: depilacja laserowa i odmładzanie skóry">
 <meta property="og:description" content="Bezpłatna konsultacja i próba laserowa w Radomiu. Depilacja LightSheer DUET, RFrax Lift, laser tulowy, Super Veloce, makijaż permanentny.">
-<meta property="og:image" content="https://laserclinic.radom.pl/og.jpg?v=2">
+<meta property="og:image" content="https://laserclinic.radom.pl/og.jpg?v=3">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="theme-color" content="#FFFFFF">
@@ -81,7 +81,7 @@
     letter-spacing: -0.012em;
     margin: 0;
   }
-  h1 { font-size: clamp(2.15rem, 5.2vw, 3.45rem); line-height: 1.04; letter-spacing: -.02em; }
+  h1 { font-size: clamp(2.15rem, 4.7vw, 3.15rem); line-height: 1.06; letter-spacing: -.02em; }
   @media (max-width: 720px) { h1 { font-size: clamp(1.95rem, 8.6vw, 2.35rem); line-height: 1.1; letter-spacing: -.01em; } }
   h2 { font-size: clamp(2rem, 4.6vw, 3.2rem); line-height: 1.06; letter-spacing: -.018em; }
   h3 { font-size: clamp(1.15rem, 2.2vw, 1.42rem); line-height: 1.24; }
@@ -153,7 +153,7 @@
   .site-nav a { font-size: .92rem; font-weight: 600; text-decoration: none; color: var(--ink-2); padding: .3rem 0; border-bottom: 2px solid transparent; white-space: nowrap; }
   .site-nav a:hover { color: var(--accent-deep); border-bottom-color: var(--accent); }
   @media (min-width: 1000px) { .site-nav { display: flex; } .head-tel small { display: none; } .head-actions { gap: 1rem; } .head-actions .btn { padding: .8rem 1.1rem; font-size: .9rem; white-space: nowrap; } .brand img { height: 46px; } }
-  @media (min-width: 1280px) { .site-nav { gap: 1.35rem; } .head-tel small { display: block; } .head-actions .btn { padding: .95rem 1.4rem; font-size: .95rem; } }
+  @media (min-width: 1280px) { .site-nav { gap: 1.35rem; } .head-tel small { display: block; } .head-actions .btn { padding: .95rem 1.4rem; font-size: .95rem; } .brand img { height: 52px; } }
   .nav-toggle {
     display: none; width: 44px; height: 44px; padding: 10px; border: 1px solid var(--line-strong); border-radius: 2px;
     background: var(--surface); cursor: pointer; flex-direction: column; justify-content: space-between;
@@ -184,7 +184,7 @@
   /* ---------- hero ---------- */
   .hero { padding-top: clamp(2.4rem, 5.5vw, 4.2rem); padding-bottom: clamp(2.4rem, 5.5vw, 4rem); }
   .hero-grid { display: grid; gap: clamp(2rem, 5vw, 3.4rem); grid-template-columns: 1fr; }
-  @media (min-width: 940px) { .hero-grid { grid-template-columns: 1.08fr .92fr; align-items: center; } }
+  @media (min-width: 940px) { .hero-grid { grid-template-columns: 1.12fr .88fr; align-items: center; } }
   .hero-copy { display: flex; flex-direction: column; gap: 1.3rem; align-items: flex-start; min-width: 0; }
   .hero-copy > * { max-width: 100%; }
   .hero-grid > * { min-width: 0; }
@@ -201,8 +201,9 @@
     padding: clamp(1.6rem, 3.4vw, 2.3rem);
     display: flex; flex-direction: column; gap: 1.3rem;
   }
-  .hero-card::before { content: ""; position: absolute; inset: -12% 0; z-index: -2; background: url("assets/hero.jpg") center / cover no-repeat; background-image: -webkit-image-set(url("assets/hero.webp") type("image/webp"), url("assets/hero.jpg") type("image/jpeg")); background-image: image-set(url("assets/hero.webp") type("image/webp"), url("assets/hero.jpg") type("image/jpeg")); transform: translate3d(0, var(--py, 0px), 0) scale(1.04); }
-  .hero-card::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(160deg, rgba(23,13,19,.78) 0%, rgba(51,25,42,.66) 55%, rgba(51,25,42,.84) 100%); }
+  .hero-card::before { content: ""; position: absolute; inset: -12% 0; z-index: -2; background: url("assets/hero-poster.jpg") center / cover no-repeat; background-image: -webkit-image-set(url("assets/hero-poster.webp") type("image/webp"), url("assets/hero-poster.jpg") type("image/jpeg")); background-image: image-set(url("assets/hero-poster.webp") type("image/webp"), url("assets/hero-poster.jpg") type("image/jpeg")); transform: translate3d(0, var(--py, 0px), 0) scale(1.04); }
+  .hero-card::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(160deg, rgba(23,13,19,.7) 0%, rgba(51,25,42,.58) 55%, rgba(51,25,42,.8) 100%); }
+  .hero-card h2, .plan-variants b, .plan-variants .v-price { text-shadow: 0 1px 2px rgba(23,13,19,.45); }
   .hero-card > * { position: relative; z-index: 1; }
   .hero-card .hero-video { position: absolute; inset: -12% 0; z-index: -2; width: 100%; height: 124%; object-fit: cover; opacity: 0; transition: opacity 1.4s ease; transform: translate3d(0, var(--py, 0px), 0) scale(1.04); pointer-events: none; }
   .hero-card .hero-video.is-on { opacity: 1; }
@@ -210,7 +211,9 @@
   .owner { display: flex; gap: .9rem; align-items: flex-start; }
   .owner img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid var(--plum-accent); box-shadow: 0 0 0 3px rgba(236,85,165,.25); }
   .hero-proof { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, auto); justify-content: start; gap: 1.2rem; font-size: .84rem; color: var(--ink-2); }
-  @media (max-width: 420px) { .hero-proof { grid-template-columns: repeat(2, auto); gap: .9rem 2rem; } .hero-proof li + li { border-left: 0; padding-left: 0; margin-left: 0; } }
+  @media (max-width: 420px) { .hero-proof { grid-template-columns: repeat(2, auto); gap: .9rem 2rem; } .hero-proof li:nth-child(odd) { border-left: 0; padding-left: 0; } }
+  @media (max-width: 720px) { .hero-cta, .hero-cta .btn { width: 100%; } }
+  @media (max-width: 480px) { .hero { padding-top: 1.6rem; } .hero-copy { gap: 1rem; } .hero-lead { font-size: .98rem; line-height: 1.55; } .hero-note { display: none; } }
   .hero-proof li { display: flex; flex-direction: column; gap: .05rem; }
   .hero-proof li + li { border-left: 1px solid var(--line); padding-left: 1.2rem; }
   .hero-proof b { font-family: var(--font-display); font-weight: 400; font-size: 1.35rem; line-height: 1.1; color: var(--ink); }
@@ -256,6 +259,7 @@
     transition: background-color .25s ease, color .25s ease, border-color .25s ease, box-shadow .25s ease, transform .2s var(--ease-out);
   }
   .concern-tab:hover { border-color: var(--accent); color: var(--accent-deep); }
+  @media (max-width: 480px) { .concern-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem; } .concern-tab { width: 100%; padding-inline: .5rem; text-align: center; font-size: .95rem; } }
   .concern-tab:active { transform: scale(.97); }
   .concern-tab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: #FFFFFF; box-shadow: 0 8px 18px -10px rgba(197,18,124,.6); }
 
@@ -293,6 +297,10 @@
   .side-fx figcaption { font-size: .82rem; color: var(--ink-3); }
   @media (max-width: 859px) {
     .concern-panel { display: flex; flex-direction: column; }
+    .concern-main { display: contents; }
+    .concern-main > .eyebrow { order: -3; }
+    .concern-main > h3 { order: -2; margin-bottom: .2rem; }
+    .concern-panel .btn { align-self: stretch; }
     .concern-side { order: -1; border-left: 0; border-bottom: 1px solid var(--line); padding: 0 0 1.2rem; display: grid; grid-template-columns: 42fr 58fr; gap: .9rem 1.1rem; }
     .concern-side .spec:first-child { grid-column: 1 / -1; }
     .concern-side .side-fx { grid-column: 1; grid-row: 2 / span 3; margin: 0; }
@@ -302,7 +310,7 @@
     .spec dd.big small { display: block; font-size: .9rem; margin-top: .1rem; }
     .concern-side .spec dd.big small::before { content: none; }
   }
-  .concern-panel.is-entering .concern-main { animation: panelIn .32s var(--ease-out) both; }
+  .concern-panel.is-entering .concern-main, .concern-panel.is-entering .concern-main > * { animation: panelIn .32s var(--ease-out) both; }
   .concern-panel.is-entering .concern-side { animation: panelIn .32s var(--ease-out) 90ms both; }
   @keyframes panelIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
   .spec { display: flex; flex-direction: column; gap: .12rem; }
@@ -318,7 +326,7 @@
   @media (min-width: 780px) { .steps { grid-template-columns: repeat(4, 1fr); gap: 1.1rem; } }
   .step { display: flex; flex-direction: column; gap: .5rem; padding-top: 1.1rem; position: relative; }
   .step::after { content: ""; position: absolute; left: 0; top: 0; height: 2px; width: 100%; background: var(--accent); }
-  .step::before { content: attr(data-n); display: block; font-family: var(--font-display); font-size: 2.4rem; line-height: 1; color: var(--gold); opacity: .6; margin-bottom: .1rem; }
+  .step::before { content: attr(data-n); display: block; font-family: var(--font-display); font-size: 2.4rem; line-height: 1; color: var(--gold); opacity: .85; margin-bottom: .1rem; }
   .step .n { display: none; }
   @media (min-width: 480px) and (max-width: 779px) { .steps { grid-template-columns: 1fr 1fr; gap: 1.2rem 1rem; } }
   .step .n { font-family: var(--font-body); font-weight: 600; font-size: .8rem; color: var(--accent-deep); letter-spacing: .08em; font-variant-numeric: tabular-nums; }
@@ -336,10 +344,10 @@
   @media (min-width: 800px) { .vcard.featured { transform: translateY(-6px); } }
   @media (max-width: 799px) { .vcard.featured { order: -1; } }
   .vcard .flag {
-    position: absolute; top: -0.72rem; left: 50%; transform: translateX(-50%); white-space: nowrap; box-shadow: 0 0 0 1px var(--gold-soft);
-    background: var(--accent); color: #FFFFFF;
-    font-size: .68rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
-    padding: .18rem .6rem; border-radius: 2px;
+    position: absolute; top: -0.8rem; left: 50%; transform: translateX(-50%); white-space: nowrap;
+    background: var(--gold-soft); color: var(--plum);
+    font-size: .72rem; font-weight: 600; letter-spacing: .06em; text-transform: none;
+    padding: .22rem .7rem; border-radius: 999px;
   }
   .vcard h3 { font-size: 1.28rem; }
   .vcard ul { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: .3rem; font-size: .92rem; color: var(--ink-2); }
@@ -355,8 +363,8 @@
   .portrait-wrap::before { content: ""; position: absolute; inset: 16px -16px -16px 16px; border: 1px solid var(--gold); pointer-events: none; z-index: 0; }
   @media (max-width: 879px) { .portrait-wrap::before { inset: 12px -12px -12px 12px; } }
   @media (min-width: 880px) { .portrait-wrap { position: sticky; top: 96px; } }
-  .portrait { position: relative; z-index: 1; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; display: block; box-shadow: var(--shadow); }
-  @media (max-width: 719px) { .portrait { max-height: 62vh; object-position: center 20%; } }
+  .portrait { position: relative; z-index: 1; width: 100%; height: auto; aspect-ratio: 5 / 6; object-fit: cover; object-position: 50% 22%; display: block; box-shadow: var(--shadow); }
+  @media (max-width: 719px) { .portrait { max-height: 46vh; object-position: 50% 8%; } }
   .team-people { display: grid; gap: 1.15rem; grid-template-columns: repeat(2, 1fr); margin-top: clamp(2rem, 4vw, 2.8rem); }
   @media (min-width: 720px) { .team-people { grid-template-columns: repeat(3, minmax(0, 260px)); justify-content: start; } }
   @media (min-width: 880px) { .team-people { grid-template-columns: repeat(3, 1fr); } }
@@ -365,10 +373,10 @@
   .person { position: relative; padding-right: 8px; }
   .person::before { content: ""; position: absolute; left: 8px; top: 8px; right: 0; aspect-ratio: 4 / 5; border: 1px solid var(--gold); pointer-events: none; z-index: 0; }
   .person .ph { z-index: 1; margin-right: 8px; }
-  .person img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 18%; display: block; }
+  .person img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: var(--pos, 50% 18%); display: block; filter: saturate(.94); }
   .person b { font-family: var(--font-display); font-weight: 400; font-size: 1.1rem; margin-top: .3rem; }
   @media (max-width: 719px) { .person b { font-family: var(--font-body); font-weight: 600; font-size: .92rem; } .portrait { max-height: 52vh; } }
-  .person span { font-size: .76rem; color: var(--ink-3); text-transform: uppercase; letter-spacing: .12em; }
+  .person span { font-size: .78rem; color: var(--ink-3); text-transform: uppercase; letter-spacing: .08em; }
   @media (max-width: 719px) { .team-people { grid-template-columns: repeat(3, 1fr); gap: .7rem; } .person span { font-size: .72rem; letter-spacing: .06em; } }
   .team-copy { display: flex; flex-direction: column; gap: 1.1rem; }
   .team-copy p { color: var(--ink-2); }
@@ -379,9 +387,9 @@
   @media (min-width: 700px) { .devices { grid-template-columns: repeat(3, 1fr); gap: 1.3rem 1.1rem; } }
   .devices li { display: flex; flex-direction: column; gap: .12rem; font-size: .92rem; position: relative; padding-top: .7rem; }
   .devices li::before { content: ""; position: absolute; left: 0; top: 0; height: 2px; width: 100%; background: var(--accent); }
-  .dev-img { display: block; aspect-ratio: 4 / 5; background: #fff; box-shadow: 0 0 0 1px var(--line), 0 18px 30px -24px rgba(51,25,42,.35); margin: .1rem 0 .55rem; overflow: hidden; }
-  .dev-img img { width: 100%; height: 100%; object-fit: contain; object-position: 50% 100%; display: block; }
-  .dev-img.photo img { object-fit: cover; object-position: 50% 50%; }
+  .dev-img { display: block; aspect-ratio: 4 / 5; background: var(--surface-2); box-shadow: 0 0 0 1px var(--line), 0 18px 30px -24px rgba(51,25,42,.35); margin: .1rem 0 .55rem; overflow: hidden; }
+  .dev-img img { width: 100%; height: 100%; object-fit: contain; object-position: 50% 96%; display: block; padding: 6% 6% 0; }
+  .dev-img.photo img { object-fit: cover; object-position: 60% 40%; padding: 0; filter: saturate(.85); }
   .dev-note { font-size: .78rem; color: var(--ink-3); }
   .devices b { font-size: .95rem; }
   .devices span { color: var(--ink-2); font-size: .86rem; }
@@ -415,14 +423,15 @@
   .card .price-line { margin-top: auto; padding-top: .9rem; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: .35rem; }
   .card .price-line b { font-family: var(--font-display); font-weight: 400; font-size: 1.5rem; }
   .card .price-line span { font-size: .88rem; color: var(--ink-2); }
-  .card .btn { margin-top: .35rem; width: 100%; min-height: 56px; align-self: stretch; }
+  .card .btn { margin-top: .35rem; width: 100%; min-height: 56px; align-self: stretch; font-size: .9rem; letter-spacing: 0; padding-inline: 1.1rem; }
+  .btn-tel .btn-lbl { text-wrap: balance; }
   .card .price-line span { display: block; min-height: 2.9em; }
 
   /* ---------- effects ---------- */
 
   .fx-item { margin: 0; display: flex; flex-direction: column; gap: .55rem; }
   .fx-frame { display: block; position: relative; overflow: hidden; aspect-ratio: 4 / 5; appearance: none; -webkit-appearance: none; border: 0; padding: 0; width: 100%; font: inherit; color: inherit; text-align: inherit; background: linear-gradient(160deg, #33192A, #4A2540); box-shadow: 0 18px 40px -22px rgba(51,25,42,.45); cursor: zoom-in; }
-  .fx-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block; }
+  .fx-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block; filter: saturate(.95); }
   [data-layout] .fx-frame::before, [data-layout] .fx-frame::after { position: absolute; top: .6rem; z-index: 2; font: 600 .68rem/1 var(--font-body); letter-spacing: .14em; text-transform: uppercase; padding: .3rem .55rem; background: rgba(51,25,42,.78); color: #fff; border-radius: 2px; pointer-events: none; }
   [data-layout] .fx-frame::before { content: "Przed"; left: .6rem; }
   [data-layout] .fx-frame::after { content: "Po"; right: .6rem; }
@@ -445,7 +454,7 @@
 
   /* ---------- gallery ---------- */
   .gallery figure { margin: 0; display: flex; flex-direction: column; gap: .45rem; }
-  .gallery img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: center 35%; display: block; box-shadow: 0 18px 40px -22px rgba(51,25,42,.35); }
+  .gallery img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: center 35%; display: block; box-shadow: 0 18px 40px -22px rgba(51,25,42,.35); filter: saturate(.88) contrast(1.02); }
   .gallery figcaption { font-size: .82rem; color: var(--ink-3); }
 
   .brwi-gal { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; margin: .4rem 0 1.2rem; max-width: 640px; }
@@ -487,8 +496,23 @@
   .rating-bar b { font-family: var(--font-display); font-weight: 400; font-size: 1.6rem; }
   .reviews { display: grid; gap: 1.15rem; grid-template-columns: 1fr; }
   @media (min-width: 760px) { .reviews { grid-template-columns: repeat(3, 1fr); } }
+  #opinie { background: var(--plum); color: var(--plum-ink); }
+  #opinie h2 { color: #fff; }
+  #opinie .eyebrow { color: var(--plum-accent); }
+  #opinie .section-lead { color: rgba(247,234,241,.82); }
+  #opinie .section-lead a { color: var(--plum-accent); text-decoration-color: rgba(236,85,165,.5); }
+  #opinie .review p { color: #fff; }
+  #opinie .review cite { color: rgba(247,234,241,.65); }
+  #opinie .review { border-top-color: rgba(255,255,255,.14); }
+  #opinie .review::before { color: var(--gold); opacity: .6; }
+  #opinie .loop-nav button.arrow { background: transparent; border-color: rgba(255,255,255,.35); color: #fff; }
+  #opinie .loop-nav button.arrow:hover { border-color: var(--plum-accent); color: var(--plum-accent); }
+  #opinie .reviews-dots button::before { background: rgba(255,255,255,.3); }
+  #opinie .reviews-dots button[aria-current="true"]::before { background: var(--plum-accent); }
+  #opinie .fx-note { color: rgba(247,234,241,.6); }
+  #opinie .fx-note a { color: var(--plum-accent); }
   .review { background: transparent; border: 0; border-top: 1px solid var(--line); padding: 2.8rem 0 1.4rem; display: flex; flex-direction: column; gap: .9rem; margin: 0; position: relative; }
-  .review::before { content: "\201E"; position: absolute; top: -1rem; left: -.1rem; font-family: var(--font-display); font-size: 5.2rem; line-height: 1; color: var(--gold); opacity: .4; pointer-events: none; }
+  .review::before { content: "\201E"; position: absolute; top: -2.7rem; left: -.1rem; font-family: var(--font-display); font-size: 4.6rem; line-height: 1; color: var(--gold); opacity: .5; pointer-events: none; }
   .review p { font-family: var(--font-display); font-size: 1.14rem; line-height: 1.5; }
   .review cite { font-style: normal; font-size: .85rem; color: var(--ink-3); letter-spacing: .04em; margin-top: auto; }
   .review.placeholder { border-style: dashed; justify-content: center; text-align: center; color: var(--ink-3); font-size: .9rem; }
@@ -564,7 +588,7 @@
   .contact-grid { display: grid; gap: 2rem; grid-template-columns: 1fr; }
   @media (min-width: 860px) { .contact-grid { grid-template-columns: 1.05fr .95fr; align-items: start; } }
   .contact-info { display: flex; flex-direction: column; gap: 1.25rem; align-items: flex-start; }
-  .contact-info > p { color: var(--ink-2); }
+  .contact-info > p:not(.eyebrow) { color: var(--ink-2); }
   .contact dl { display: grid; gap: 1.1rem 1.5rem; grid-template-columns: 1fr 1fr; margin: 0; width: 100%; }
   @media (max-width: 560px) { .contact dl { grid-template-columns: 1fr; } }
   .contact dt { font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
@@ -580,7 +604,11 @@
     padding: clamp(1.3rem, 2.6vw, 1.8rem);
     display: flex; flex-direction: column; gap: .95rem;
   }
+  .callback { border-top: 2px solid var(--gold); }
   .callback h3 { color: var(--ink); font-size: 1.25rem; }
+  .callback .big-number { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 2.6rem); color: var(--accent-deep) !important; text-decoration: none !important; line-height: 1.1; letter-spacing: .01em; }
+  .callback .big-number:hover { color: var(--accent) !important; }
+  .map-card img { aspect-ratio: 16 / 9; object-position: center 40%; }
   .callback label { display: flex; flex-direction: column; gap: .3rem; font-size: .85rem; color: var(--ink-2); }
   .callback input, .callback select {
     padding: .78rem .9rem; border-radius: 2px; font-size: 1rem;
@@ -593,14 +621,14 @@
   .callback .rodo { font-size: .78rem; color: var(--ink-3); }
   .callback .form-msg { font-size: .92rem; color: var(--accent-deep); }
   .map-card { display: block; margin-top: .6rem; text-decoration: none; color: var(--ink-2); font-size: .85rem; }
-  .map-card img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; box-shadow: var(--shadow); margin-bottom: .45rem; }
+  .map-card img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; display: block; box-shadow: var(--shadow); margin-bottom: .45rem; }
   .map-card:hover { color: var(--accent-deep); }
   .callback .form-msg:empty { display: none; }
 
   /* ---------- sticky mobile cta ---------- */
   .mobile-cta {
     position: fixed; inset-inline: 0; bottom: 0; z-index: 50;
-    display: grid; grid-template-columns: 66fr 34fr; gap: 1px;
+    display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1px;
     background: var(--line-strong); border-top: 1px solid var(--line-strong);
     transform: translateY(100%); visibility: hidden; transition: transform .45s var(--ease-out), box-shadow .45s, visibility 0s .45s;
   }
@@ -612,7 +640,9 @@
   .mobile-cta .book { background: var(--accent); color: #FFFFFF; }
   .mobile-cta .book svg { flex: none; }
   .mobile-cta .book span { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.2; }
-  .mobile-cta .book b { font-size: 1.04rem; font-weight: 700; letter-spacing: .01em; }
+  .mobile-cta .book b { font-size: 1.02rem; font-weight: 700; letter-spacing: .01em; white-space: nowrap; }
+  .mobile-cta .call { padding-inline: 1.1rem; }
+  @media (max-width: 400px) { .mobile-cta .book b .pre { display: none; } }
   .mobile-cta .book small { font-size: .8rem; opacity: .95; font-weight: 400; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
   .mobile-cta .book span { min-width: 0; }
   @media (min-width: 721px) { .mobile-cta { display: none; } }
@@ -724,6 +754,7 @@
     td .sub, td.price small, .vcard .v-sum small, .card .price-line span, .trust-item span, .fx-item figcaption, .gallery figcaption, .devices span, .hero-note, .side-fx figcaption { font-size: .9rem; }
     .card ul, .vcard ul, .step p, .devices li, .concern-main .who { font-size: .95rem; }
     .vcard .flag { font-size: .78rem; }
+    .spec dt, .side-fx figcaption, .contact dt { font-size: .8rem; }
     [data-layout] .fx-frame::before, [data-layout] .fx-frame::after { font-size: .76rem; padding: .35rem .6rem; }
     .faq summary .count { font-size: .88rem; }
     .grp td { font-size: .8rem; }
@@ -927,7 +958,7 @@
           <p>Przed pierwszym zabiegiem robimy bezpłatną próbę laserową: patrzymy, jak reaguje Twoja skóra, i&nbsp;dobieramy parametry tak, żeby było skutecznie i&nbsp;bezpiecznie. Jeśli wybierzesz pakiet 3 albo 6 zabiegów, każdy zabieg wychodzi taniej niż pojedynczo.</p>
           </details>
           <p class="who">Zabieg wykonuje dyplomowana kosmetolożka. Zaczynamy od bezpłatnej próby laserowej.</p>
-          <a class="btn btn-primary btn-tel" href="tel:+48483121551" data-cta="panel-owlosienie"><svg class="btn-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1z"/></svg><span class="btn-lbl">Umów bezpłatną próbę laserową<small class="btn-sub">zadzwoń: 48&nbsp;312&nbsp;15&nbsp;51</small></span></a>
+          <a class="btn btn-primary btn-tel" href="tel:+48483121551" data-cta="panel-owlosienie"><svg class="btn-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1z"/></svg><span class="btn-lbl">Umów bezpłatną próbę&nbsp;laserową<small class="btn-sub">zadzwoń: 48&nbsp;312&nbsp;15&nbsp;51</small></span></a>
           <a class="back-tabs" href="#zabiegi">Inny problem skóry? Wybierz z&nbsp;listy wyżej</a>
         </div>
         <div class="concern-side">
@@ -1006,7 +1037,7 @@
           </div>
         </article>
         <article class="vcard featured">
-          <span class="flag">Najczęściej wybierany</span>
+          <span class="flag">najczęściej wybierany</span>
           <h3>Program Optymalny</h3>
           <ul>
             <li>3 zabiegi RFrax Lift (twarz)</li>
@@ -1077,9 +1108,9 @@
     <div class="wrap">
       <div class="team-people" data-reveal-group>
         <!-- do uzupełnienia: zdjęcia pozostałych kosmetolożek od Kasi -->
-        <figure class="person" style="margin:0"><span class="ph"><picture><source type="image/webp" srcset="assets/magdalena.webp"><img src="assets/magdalena.jpg" alt="Magdalena Szczepińska, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"></picture></span><b>Magdalena Szczepińska</b><span>kosmetolożka</span></figure>
+        <figure class="person" style="margin:0"><span class="ph"><picture><source type="image/webp" srcset="assets/magdalena.webp"><img style="--pos:50% 8%" src="assets/magdalena.jpg" alt="Magdalena Szczepińska, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"></picture></span><b>Magdalena Szczepińska</b><span>kosmetolożka</span></figure>
         <figure class="person" style="margin:0"><span class="ph"><picture><source type="image/webp" srcset="assets/wioleta.webp"><img src="assets/wioleta.jpg" alt="Wioleta Niewiadomska, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"></picture></span><b>Wioleta Niewiadomska</b><span>kosmetolożka</span></figure>
-        <figure class="person" style="margin:0"><span class="ph"><picture><source type="image/webp" srcset="assets/agata.webp"><img src="assets/agata.jpg" alt="Agata Romanowska, kosmetolożka i pielęgniarka Laser Clinic Radom" width="520" height="640" loading="lazy"></picture></span><b>Agata Romanowska</b><span>kosmetolożka i&nbsp;pielęgniarka</span></figure>
+        <figure class="person" style="margin:0"><span class="ph"><picture><source type="image/webp" srcset="assets/agata.webp"><img style="--pos:50% 30%" src="assets/agata.jpg" alt="Agata Romanowska, kosmetolożka i pielęgniarka Laser Clinic Radom" width="520" height="640" loading="lazy"></picture></span><b>Agata Romanowska</b><span>kosmetolożka i&nbsp;pielęgniarka</span></figure>
       </div>
     </div>
   </section>
@@ -1118,7 +1149,7 @@
             <li>zabiegi 7 i&nbsp;8, jeśli będą potrzebne, za połowę ceny</li>
           </ul>
           <div class="price-line"><b class="num">od 119&nbsp;zł</b><span>za zabieg · pakiety 6 zabiegów od 569&nbsp;zł</span></div>
-          <a class="btn btn-primary btn-tel" href="tel:+48483121551" data-cta="card-depilacja"><svg class="btn-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1z"/></svg><span class="btn-lbl">Umów bezpłatną próbę laserową<small class="btn-sub">zadzwoń: 48&nbsp;312&nbsp;15&nbsp;51</small></span></a>
+          <a class="btn btn-primary btn-tel" href="tel:+48483121551" data-cta="card-depilacja"><svg class="btn-ico" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1z"/></svg><span class="btn-lbl">Umów bezpłatną próbę&nbsp;laserową<small class="btn-sub">zadzwoń: 48&nbsp;312&nbsp;15&nbsp;51</small></span></a>
           </div>
         </article>
         <article class="card">
@@ -1158,7 +1189,7 @@
         <figure class="fx-item" data-layout="side"><button type="button" class="fx-frame" aria-label="Powiększ zdjęcie"><img src="assets/fx-depilacja-pachy.jpg" alt="Depilacja laserowa pach LightSheer w Laser Clinic Radom, przed i po 3 zabiegach" width="640" height="800" loading="lazy"><i class="beam" aria-hidden="true"></i><span class="zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.2-4.2M11 8v6M8 11h6"/></svg></span></button><figcaption>Depilacja laserowa pach, po 3 zabiegach</figcaption></figure>
         <figure class="fx-item" data-layout="stack"><button type="button" class="fx-frame" aria-label="Powiększ zdjęcie"><img src="assets/fx-depilacja-broda.jpg" alt="Depilacja laserowa brody LightSheer w Laser Clinic Radom, efekt po 3 zabiegach" width="640" height="640" loading="lazy"><i class="beam" aria-hidden="true"></i><span class="zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.2-4.2M11 8v6M8 11h6"/></svg></span></button><figcaption>Depilacja laserowa brody LightSheer, efekt po 3 zabiegach</figcaption></figure>
         <figure class="fx-item" data-layout="stack"><button type="button" class="fx-frame" aria-label="Powiększ zdjęcie"><img src="assets/fx-naczynka.jpg" alt="Zamykanie naczynek na policzku w Laser Clinic Radom, efekt po jednym zabiegu światłem szerokopasmowym" width="640" height="800" loading="lazy"><i class="beam" aria-hidden="true"></i><span class="zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.2-4.2M11 8v6M8 11h6"/></svg></span></button><figcaption>Zamykanie naczynek, efekt po jednym zabiegu światłem</figcaption></figure>
-        <figure class="fx-item"><button type="button" class="fx-frame" aria-label="Powiększ zdjęcie"><img src="assets/efekt1.jpg" alt="Lifting powiek Plazma ARC w Laser Clinic Radom, zdjęcia przed i po zabiegu" width="600" height="800" loading="lazy"><i class="beam" aria-hidden="true"></i><span class="zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.2-4.2M11 8v6M8 11h6"/></svg></span></button><figcaption>Lifting powiek Plazma ARC, przed i&nbsp;po</figcaption></figure>
+        <figure class="fx-item" data-layout="stack"><button type="button" class="fx-frame" aria-label="Powiększ zdjęcie"><img src="assets/efekt1.jpg" alt="Lifting powiek Plazma ARC w Laser Clinic Radom, zdjęcia przed i po zabiegu" width="600" height="800" loading="lazy"><i class="beam" aria-hidden="true"></i><span class="zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.2-4.2M11 8v6M8 11h6"/></svg></span></button><figcaption>Lifting powiek Plazma ARC, przed i&nbsp;po</figcaption></figure>
         <figure class="fx-item" data-layout="side"><button type="button" class="fx-frame" aria-label="Powiększ zdjęcie"><img src="assets/fx-endermologia.jpg" alt="Endermologia LPG na brzuch w Laser Clinic Radom, efekt po serii zabiegów" width="640" height="535" loading="lazy"><i class="beam" aria-hidden="true"></i><span class="zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.2-4.2M11 8v6M8 11h6"/></svg></span></button><figcaption>Endermologia LPG na brzuch, po serii zabiegów</figcaption></figure>
         <figure class="fx-item" data-layout="stack"><button type="button" class="fx-frame" aria-label="Powiększ zdjęcie"><img src="assets/fx-depilacja-broda2.jpg" alt="Depilacja laserowa podbródka LightSheer w Laser Clinic Radom, efekt po 3 zabiegach" width="640" height="800" loading="lazy"><i class="beam" aria-hidden="true"></i><span class="zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.2-4.2M11 8v6M8 11h6"/></svg></span></button><figcaption>Depilacja laserowa podbródka, efekt po 3 zabiegach</figcaption></figure>
         <figure class="fx-item"><button type="button" class="fx-frame" aria-label="Powiększ zdjęcie"><img src="assets/efekt3.jpg" alt="Naturalny efekt makijażu permanentnego ust u klientki Laser Clinic Radom" width="640" height="800" loading="lazy"><i class="beam" aria-hidden="true"></i><span class="zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.2-4.2M11 8v6M8 11h6"/></svg></span></button><figcaption>Makijaż permanentny ust u&nbsp;naszej klientki</figcaption></figure>
@@ -1180,12 +1211,12 @@
       </div>
       <div class="loop" data-loop="salon" data-reveal>
       <div class="loop-track cols-1 gallery">
-        <figure><picture><source type="image/webp" srcset="assets/salon-front.webp"><img src="assets/salon-front.jpg" alt="Wejście do salonu Laser Clinic przy ul. Witolda 3 w Radomiu" width="1200" height="800" loading="lazy"></picture><figcaption>Wejście do salonu, ul. Witolda 3</figcaption></figure>
         <figure><img src="assets/work-depilacja.jpg" alt="Zabieg laserem tulowym na twarz w Laser Clinic Radom" width="900" height="675" loading="lazy"><figcaption>Laser tulowy, zabieg na przebarwienia</figcaption></figure>
         <figure><img src="assets/work-laser.jpg" alt="RFrax, frakcyjna radiofrekwencja mikroigłowa Medica w Laser Clinic Radom" width="900" height="675" loading="lazy"><figcaption>RFrax Medica, radiofrekwencja mikroigłowa</figcaption></figure>
         <figure><img src="assets/work-pmu.jpg" alt="Plazma ARC, lifting powieki górnej w Laser Clinic Radom" width="900" height="675" loading="lazy"><figcaption>Plazma ARC, lifting powieki</figcaption></figure>
         <figure><img src="assets/dev-storz.jpg" alt="Storz Medical, fala uderzeniowa w Laser Clinic Radom" width="900" height="675" loading="lazy"><figcaption>Storz Medical, fala uderzeniowa</figcaption></figure>
         <figure><img src="assets/work-rf.jpg" alt="Vitalift, zabieg ujędrniający na twarz lub ciało w Laser Clinic Radom" width="900" height="675" loading="lazy"><figcaption>Vitalift, na twarz lub ciało</figcaption></figure>
+        <figure><picture><source type="image/webp" srcset="assets/salon-front.webp"><img src="assets/salon-front.jpg" alt="Wejście do salonu Laser Clinic przy ul. Witolda 3 w Radomiu" width="1200" height="800" loading="lazy"></picture><figcaption>Wejście do salonu, ul. Witolda 3</figcaption></figure>
       </div>
       <div class="loop-nav"><button class="arrow" type="button" data-dir="-1" aria-label="Poprzednie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button><div class="loop-dots"></div><button class="arrow" type="button" data-dir="1" aria-label="Następne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button></div>
       </div>
@@ -1680,7 +1711,6 @@
   </section>
 
   <!-- REVIEWS -->
-  <hr class="laser-rule" aria-hidden="true">
   <section id="opinie">
     <div class="wrap">
       <div class="section-head" data-reveal>
@@ -1746,7 +1776,6 @@
   </section>
 
   <!-- FIRST VISIT -->
-  <hr class="laser-rule" aria-hidden="true">
   <section class="narrow" id="pierwsza-wizyta">
     <div class="wrap">
       <div class="section-head" data-reveal>
@@ -1855,6 +1884,7 @@
       </div>
       <aside class="callback" data-reveal>
         <h3>Umów się telefonicznie</h3>
+        <a class="big-number num" href="tel:+48483121551" data-cta="kontakt-box-number">48&nbsp;312&nbsp;15&nbsp;51</a>
         <p style="color:var(--ink-2);font-size:.97rem">Recepcja odbiera od poniedziałku do piątku 8:00-20:00 i&nbsp;w&nbsp;soboty 8:00-15:00. Rozmowa trwa chwilę: powiesz, co Cię interesuje, a&nbsp;my zaproponujemy termin bezpłatnej konsultacji.</p>
         <a class="btn btn-primary num" href="tel:+48483121551" data-cta="kontakt-box-tel" style="align-self:flex-start">Zadzwoń: 48&nbsp;312 15 51</a>
         <p style="color:var(--ink-3);font-size:.85rem;margin:0">Numer komórkowy salonu: <a class="num" href="tel:+48533310316">533&nbsp;310 316</a></p>
@@ -1913,7 +1943,7 @@
 </dialog>
 
 <nav class="mobile-cta" id="mobile-cta" aria-label="Szybki kontakt">
-  <a class="book" href="tel:+48483121551" data-cta="sticky-tel"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1z"/></svg><span><b class="num">Zadzwoń: 48&nbsp;312 15 51</b><small id="sticky-hours">bezpłatna konsultacja</small></span></a>
+  <a class="book" href="tel:+48483121551" data-cta="sticky-tel"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1z"/></svg><span><b class="num"><span class="pre">Zadzwoń: </span>48&nbsp;312&nbsp;15&nbsp;51</b><small id="sticky-hours">bezpłatna konsultacja</small></span></a>
   <a class="call" href="#cennik">Cennik</a>
 </nav>
 <button class="to-top" id="to-top" type="button" aria-label="Do góry">↑</button>
@@ -2164,8 +2194,9 @@
       if (matchMedia("(prefers-reduced-motion: reduce)").matches || c.saveData || /2g/.test(c.effectiveType || "")) { v.remove(); return; }
       const start = () => {
         const src = document.createElement("source"); src.type = "video/mp4";
-        src.src = matchMedia("(max-width: 939px)").matches ? "assets/silk-loop-portrait.mp4" : "assets/silk-loop.mp4";
-        v.appendChild(src); v.load();
+        const card = v.closest(".hero-card"); const r = card ? card.offsetWidth / Math.max(1, card.offsetHeight) : 1;
+        src.src = r > 1.15 ? "assets/silk-loop.mp4" : "assets/silk-loop-portrait.mp4";
+        v.appendChild(src); v.load(); try { v.playbackRate = .85; } catch (e) {}
         v.addEventListener("playing", () => v.classList.add("is-on"), { once: true });
         const p = v.play(); if (p && p.catch) p.catch(() => {});
         if ("IntersectionObserver" in window) new IntersectionObserver(es => { if (es[0].isIntersecting) { const q = v.play(); if (q && q.catch) q.catch(() => {}); } else v.pause(); }, { threshold: 0 }).observe(v);
@@ -2310,7 +2341,7 @@
       if (stopped) return;
       raf = requestAnimationFrame(frame);
       var idle = now - input > 6000;
-      if (idle && now - last < 32) return;                                       /* bezczynność: 30 fps */
+      if ((idle || !fine) && now - last < 32) return;                                       /* bezczynność: 30 fps */
       var dt = Math.min(0.05, (now - last) / 1000); last = now;
       var t = (now - t0) / 1000, ax, ay;
       if (fine) { ax = tx + 0.02 * Math.sin(t * 0.31); ay = ty + 0.02 * Math.cos(t * 0.23); }   /* lekki oddech, gdy mysz stoi */
