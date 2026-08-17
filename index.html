@@ -273,11 +273,11 @@
   .card .btn { margin-top: .35rem; align-self: flex-start; }
 
   /* ---------- effects ---------- */
-  .fx-grid { display: grid; gap: 1.15rem; grid-template-columns: 1fr; }
-  @media (min-width: 560px) { .fx-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (min-width: 900px) { .fx-grid { grid-template-columns: repeat(3, 1fr); } }
-  .fx-item { margin: 0; display: flex; flex-direction: column; gap: .55rem; }
-  .fx-item img { width: 100%; aspect-ratio: 4 / 5; object-fit: contain; background: var(--surface-2); display: block; box-shadow: var(--shadow); border: 1px solid var(--line); }
+  .fx-grid { columns: 1; column-gap: 1.15rem; }
+  @media (min-width: 560px) { .fx-grid { columns: 2; } }
+  @media (min-width: 900px) { .fx-grid { columns: 3; } }
+  .fx-item { margin: 0 0 1.15rem; display: flex; flex-direction: column; gap: .55rem; break-inside: avoid; }
+  .fx-item img { width: 100%; height: auto; display: block; box-shadow: var(--shadow); border: 1px solid var(--line); }
   .fx-item figcaption { font-size: .85rem; color: var(--ink-2); }
   .fx-note { margin-top: 1.15rem; font-size: .88rem; color: var(--ink-3); max-width: none; }
 
@@ -792,10 +792,10 @@
         <p class="section-lead">Zdjęcia pochodzą z&nbsp;naszego gabinetu i&nbsp;pokazują rzeczywiste klientki oraz efekty naszej pracy. Publikujemy je wyłącznie za zgodą.</p>
       </div>
       <div class="fx-grid">
-        <figure class="fx-item"><img src="assets/fx-depilacja-broda.jpg" alt="Depilacja laserowa brody LightSheer w Laser Clinic Radom, efekt po 3 zabiegach" width="640" height="800" loading="lazy"><figcaption>Depilacja laserowa brody LightSheer, efekt po 3 zabiegach</figcaption></figure>
+        <figure class="fx-item"><img src="assets/fx-depilacja-broda.jpg" alt="Depilacja laserowa brody LightSheer w Laser Clinic Radom, efekt po 3 zabiegach" width="640" height="640" loading="lazy"><figcaption>Depilacja laserowa brody LightSheer, efekt po 3 zabiegach</figcaption></figure>
         <figure class="fx-item"><img src="assets/fx-naczynka.jpg" alt="Zamykanie naczynek na policzku w Laser Clinic Radom, efekt po jednym zabiegu światłem szerokopasmowym" width="640" height="800" loading="lazy"><figcaption>Zamykanie naczynek, efekt po jednym zabiegu światłem</figcaption></figure>
-        <figure class="fx-item"><img src="assets/efekt1.jpg" alt="Lifting powiek Plazma ARC w Laser Clinic Radom, zdjęcia przed i po zabiegu" width="640" height="800" loading="lazy"><figcaption>Lifting powiek Plazma ARC, przed i&nbsp;po</figcaption></figure>
-        <figure class="fx-item"><img src="assets/fx-endermologia.jpg" alt="Endermologia LPG na brzuch w Laser Clinic Radom, efekt po serii zabiegów" width="640" height="800" loading="lazy"><figcaption>Endermologia LPG na brzuch, po serii zabiegów</figcaption></figure>
+        <figure class="fx-item"><img src="assets/efekt1.jpg" alt="Lifting powiek Plazma ARC w Laser Clinic Radom, zdjęcia przed i po zabiegu" width="600" height="800" loading="lazy"><figcaption>Lifting powiek Plazma ARC, przed i&nbsp;po</figcaption></figure>
+        <figure class="fx-item"><img src="assets/fx-endermologia.jpg" alt="Endermologia LPG na brzuch w Laser Clinic Radom, efekt po serii zabiegów" width="640" height="535" loading="lazy"><figcaption>Endermologia LPG na brzuch, po serii zabiegów</figcaption></figure>
         <figure class="fx-item"><img src="assets/fx-depilacja-broda2.jpg" alt="Depilacja laserowa podbródka LightSheer w Laser Clinic Radom, efekt po 3 zabiegach" width="640" height="800" loading="lazy"><figcaption>Depilacja laserowa podbródka, efekt po 3 zabiegach</figcaption></figure>
         <figure class="fx-item"><img src="assets/efekt3.jpg" alt="Naturalny efekt makijażu permanentnego ust u klientki Laser Clinic Radom" width="640" height="800" loading="lazy"><figcaption>Makijaż permanentny ust u&nbsp;naszej klientki</figcaption></figure>
       </div>
