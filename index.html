@@ -257,7 +257,8 @@
   @media (min-width: 880px) { .team-grid { grid-template-columns: .9fr 1.1fr; align-items: start; } }
   .portrait { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; display: block; box-shadow: var(--shadow); }
   .team-people { display: grid; gap: 1.15rem; grid-template-columns: repeat(2, 1fr); margin-top: clamp(2rem, 4vw, 2.8rem); }
-  @media (min-width: 720px) { .team-people { grid-template-columns: repeat(3, 1fr); max-width: 780px; } }
+  @media (min-width: 720px) { .team-people { grid-template-columns: repeat(3, minmax(0, 260px)); justify-content: start; } }
+  @media (min-width: 880px) { .team-people { grid-template-columns: repeat(3, 1fr); } }
   .person { display: flex; flex-direction: column; gap: .45rem; }
   .person img { width: 100%; height: auto; aspect-ratio: 13 / 16; object-fit: cover; display: block; }
   .person b { font-size: .98rem; }
