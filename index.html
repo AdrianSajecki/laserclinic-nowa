@@ -434,7 +434,7 @@
   /* ---------- sticky mobile cta ---------- */
   .mobile-cta {
     position: fixed; inset-inline: 0; bottom: 0; z-index: 50;
-    display: grid; grid-template-columns: 1.4fr 1fr; gap: 1px;
+    display: grid; grid-template-columns: 1fr; gap: 1px;
     background: var(--line-strong); border-top: 1px solid var(--line-strong);
   }
   .mobile-cta a { padding: .95rem; text-align: center; font-size: .95rem; font-weight: 600; text-decoration: none; }
@@ -513,7 +513,6 @@
         <p class="hero-lead">Sprawdź na własnej skórze, jak działa laser, zanim za cokolwiek zapłacisz. Na bezpłatnej konsultacji oglądamy Twoją skórę, dobieramy urządzenie i&nbsp;robimy próbę laserową na małym fragmencie. Wychodzisz z&nbsp;planem i&nbsp;cenami na piśmie, a&nbsp;decyzję podejmujesz spokojnie w&nbsp;domu.</p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="tel:+48483121551" data-cta="hero-tel">Umów bezpłatną konsultację</a>
-          <a class="btn btn-ghost" href="#kontakt" data-cta="hero">Zostaw numer, oddzwonimy</a>
         </div>
         <p class="hero-note">Przycisk łączy z&nbsp;recepcją: <a class="num" href="tel:+48483121551" style="color:var(--accent-deep);font-weight:600;text-decoration:none">48 312 15 51</a>, pn–pt 8:00–20:00, sob 8:00–15:00. Konsultacja jest bezpłatna: pół godziny, zero zobowiązań, wychodzisz z&nbsp;planem i&nbsp;cenami.</p>
       </div>
@@ -1544,10 +1543,9 @@
       <div class="contact-info">
         <p class="eyebrow">Kontakt</p>
         <h2>Umów bezpłatną konsultację w&nbsp;Radomiu, ul.&nbsp;Witolda&nbsp;3</h2>
-        <p>Zadzwoń albo zostaw numer, a&nbsp;oddzwonimy. Recepcja odbiera od poniedziałku do soboty w&nbsp;godzinach pracy salonu. Konsultacja to około 30 minut: oglądamy skórę, robimy próbę laserową i&nbsp;rozpisujemy plan z&nbsp;cenami. Do niczego Cię to nie zobowiązuje.</p>
+        <p>Zadzwoń, recepcja odbiera od poniedziałku do soboty w&nbsp;godzinach pracy salonu. Konsultacja to około 30 minut: oglądamy skórę, robimy próbę laserową i&nbsp;rozpisujemy plan z&nbsp;cenami. Do niczego Cię to nie zobowiązuje.</p>
         <div class="hero-cta">
           <a class="btn btn-primary" href="tel:+48483121551" data-cta="kontakt-tel">Umów bezpłatną konsultację</a>
-          <a class="btn btn-ghost" href="#callback-form" data-cta="kontakt-form">Zostaw numer, oddzwonimy</a>
         </div>
         <p class="hours-note" id="hours-status" style="font-size:.95rem;color:var(--ink-2)"></p>
         <dl>
@@ -1559,27 +1557,12 @@
           <div><dt>Parking</dt><dd>płatny przed salonem albo bezpłatny na podwórku przy salonie</dd></div>
         </dl>
       </div>
-      <form class="callback" id="callback-form">
-        <h3>Piszesz po godzinach albo wolisz, żebyśmy oddzwoniły?</h3>
-        <p style="font-size:.8rem;margin:0"><span class="todo">do uzupełnienia</span> wysyłka formularza, podłączymy przy publikacji (backend w&nbsp;EOG)</p>
-        <label>Imię
-          <input type="text" name="name" autocomplete="given-name" placeholder="np. Anna" required>
-        </label>
-        <label>Numer telefonu
-          <input type="tel" name="phone" autocomplete="tel" placeholder="np. 600 000 000" pattern="[0-9+][0-9 ()-]{8,}" title="Podaj numer telefonu, np. 600 000 000" required>
-        </label>
-        <label>Co Cię interesuje?
-          <select name="topic">
-            <option>Program odmładzania skóry</option>
-            <option>Depilacja laserowa</option>
-            <option>Makijaż permanentny</option>
-            <option>Jeszcze nie wiem, chcę konsultację</option>
-          </select>
-        </label>
-        <button class="btn btn-primary" type="submit" data-cta="callback">Poproszę o&nbsp;telefon</button>
-        <p class="form-msg" id="form-msg" role="status"></p>
-        <p class="rodo">Administratorem danych jest Laser Clinic Katarzyna Bukowska, ul. Witolda 3, 26-600 Radom. Podane dane (imię, numer telefonu i&nbsp;temat rozmowy) wykorzystamy wyłącznie po to, żeby oddzwonić w&nbsp;sprawie wizyty. Podanie danych jest dobrowolne. Masz prawo dostępu do swoich danych, ich poprawienia i&nbsp;usunięcia; wystarczy telefon do salonu.</p>
-      </form>
+      <aside class="callback">
+        <h3>Umów się telefonicznie</h3>
+        <p style="color:var(--ink-2);font-size:.97rem">Recepcja odbiera od poniedziałku do piątku 8:00–20:00 i&nbsp;w&nbsp;soboty 8:00–15:00. Rozmowa trwa chwilę: powiesz, co Cię interesuje, a&nbsp;my zaproponujemy termin bezpłatnej konsultacji.</p>
+        <a class="btn btn-primary num" href="tel:+48483121551" data-cta="kontakt-box-tel" style="align-self:flex-start">Zadzwoń: 48 312 15 51</a>
+        <p style="color:var(--ink-3);font-size:.85rem;margin:0">Numer komórkowy salonu: <a class="num" href="tel:+48533310316">533 310 316</a></p>
+      </aside>
     </div>
   </section>
 
@@ -1624,13 +1607,11 @@
   <p class="call-hours" id="call-dialog-hours">pn–pt 8:00–20:00, sob 8:00–15:00</p>
   <div class="call-actions">
     <a class="btn btn-primary num" href="tel:+48483121551" id="call-dialog-tel">Zadzwoń: 48 312 15 51</a>
-    <a class="btn btn-ghost" href="#callback-form" id="call-dialog-form">Zostaw numer, oddzwonimy</a>
   </div>
 </dialog>
 
 <nav class="mobile-cta" aria-label="Szybki kontakt">
-  <a class="book" href="tel:+48483121551" data-cta="sticky-tel">Umów bezpłatną konsultację</a>
-  <a class="call" href="#kontakt" data-cta="sticky">Zostaw numer</a>
+  <a class="book" href="tel:+48483121551" data-cta="sticky-tel">Umów bezpłatną konsultację: 48 312 15 51</a>
 </nav>
 
 <script type="application/ld+json">
@@ -1722,14 +1703,13 @@
       a.addEventListener("click", (e) => { e.preventDefault(); dlg.showModal(); });
     });
     document.getElementById("call-dialog-close").addEventListener("click", () => dlg.close());
-    document.getElementById("call-dialog-form").addEventListener("click", () => dlg.close());
     dlg.addEventListener("close", () => {});
     const origShow = dlg.showModal.bind(dlg);
     dlg.showModal = () => { origShow(); const b = document.getElementById("call-dialog-tel"); if (b) b.focus(); };
     dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
     const now = new Date(); const d = now.getDay(); const h = now.getHours() + now.getMinutes() / 60;
     const open = (d >= 1 && d <= 5 && h >= 8 && h < 20) || (d === 6 && h >= 8 && h < 15);
-    if (!open) document.getElementById("call-dialog-hours").textContent = "Teraz recepcja nie odbiera (pn–pt 8:00–20:00, sob 8:00–15:00). Zostaw numer, oddzwonimy zaraz po otwarciu.";
+    if (!open) document.getElementById("call-dialog-hours").textContent = "Teraz recepcja nie odbiera. Zadzwoń pn–pt 8:00–20:00 albo w sobotę 8:00–15:00.";
   })();
 
   // Godziny pracy: poza nimi mówimy wprost, kiedy recepcja odbierze, i kierujemy do formularza
@@ -1741,8 +1721,7 @@
     if (open) { st.textContent = "Recepcja odbiera teraz. Zadzwoń, umówimy Cię od ręki."; }
     else {
       const next = (d === 6 && h >= 15) || d === 0 ? "w poniedziałek od 8:00" : (d === 5 && h >= 20 ? "w sobotę od 8:00" : "jutro od 8:00");
-      st.textContent = "Recepcja odbiera " + next + ". Zostaw numer, oddzwonimy zaraz po otwarciu.";
-      const f = document.getElementById("callback-form"); if (f) f.style.boxShadow = "0 0 0 3px var(--accent-tint), var(--shadow)";
+      st.textContent = "Recepcja odbiera " + next + ". Zapisz sobie numer i zadzwoń po otwarciu.";
     }
   })();
 
@@ -1785,13 +1764,6 @@
     renderDots(); restart();
   });
 
-  // Formularz oddzwonienia — w wersji roboczej nieaktywny
-  const form = document.getElementById("callback-form");
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const msg = document.getElementById("form-msg");
-    msg.textContent = "To wersja robocza strony — formularz podłączymy przy publikacji. Na razie zadzwoń: (48) 312 15 51.";
-  });
 </script>
 </body>
 </html>
