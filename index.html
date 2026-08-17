@@ -400,7 +400,7 @@
   .contact { background: var(--surface-2); border-top: 1px solid var(--line); color: var(--ink); }
   .contact h2 { color: var(--ink); }
   .contact-grid { display: grid; gap: 2rem; grid-template-columns: 1fr; }
-  @media (min-width: 860px) { .contact-grid { grid-template-columns: 1.05fr .95fr; } }
+  @media (min-width: 860px) { .contact-grid { grid-template-columns: 1.05fr .95fr; align-items: start; } }
   .contact-info { display: flex; flex-direction: column; gap: 1.25rem; align-items: flex-start; }
   .contact-info > p { color: var(--ink-2); }
   .contact dl { display: grid; gap: 1.1rem 1.5rem; grid-template-columns: 1fr 1fr; margin: 0; width: 100%; }
@@ -429,6 +429,9 @@
   .callback input::placeholder { color: var(--ink-3); }
   .callback .rodo { font-size: .78rem; color: var(--ink-3); }
   .callback .form-msg { font-size: .92rem; color: var(--accent-deep); }
+  .map-card { display: block; margin-top: .6rem; text-decoration: none; color: var(--ink-2); font-size: .85rem; }
+  .map-card img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; display: block; box-shadow: var(--shadow); margin-bottom: .45rem; }
+  .map-card:hover { color: var(--accent-deep); }
   .callback .form-msg:empty { display: none; }
 
   /* ---------- sticky mobile cta ---------- */
@@ -1562,6 +1565,10 @@
         <p style="color:var(--ink-2);font-size:.97rem">Recepcja odbiera od poniedziałku do piątku 8:00–20:00 i&nbsp;w&nbsp;soboty 8:00–15:00. Rozmowa trwa chwilę: powiesz, co Cię interesuje, a&nbsp;my zaproponujemy termin bezpłatnej konsultacji.</p>
         <a class="btn btn-primary num" href="tel:+48483121551" data-cta="kontakt-box-tel" style="align-self:flex-start">Zadzwoń: 48 312 15 51</a>
         <p style="color:var(--ink-3);font-size:.85rem;margin:0">Numer komórkowy salonu: <a class="num" href="tel:+48533310316">533 310 316</a></p>
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Laser+Clinic+ul.+Witolda+3+Radom" rel="noopener" target="_blank" class="map-card" aria-label="Wyznacz trasę do salonu w Google Maps">
+          <img src="assets/salon-front.jpg" alt="Wejście do salonu Laser Clinic, ul. Witolda 3 w Radomiu" width="1200" height="800" loading="lazy">
+          <span>Wejście od ul. Witolda 3 · kliknij, żeby wyznaczyć trasę</span>
+        </a>
       </aside>
     </div>
   </section>
