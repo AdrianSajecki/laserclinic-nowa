@@ -408,7 +408,7 @@
   table { border-collapse: collapse; width: 100%; min-width: 0; font-size: .95rem; }
   th, td { text-align: left; padding: 1.05rem 1.15rem; border-bottom: 1px solid var(--line); vertical-align: top; }
   th { font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
-  td.price { text-align: right; font-variant-numeric: tabular-nums; white-space: normal; width: 1%; font-weight: 600; }
+  td.price { text-align: right; font-variant-numeric: tabular-nums; white-space: normal; width: 1%; min-width: 14rem; font-weight: 600; }
   td.price .amt { white-space: nowrap; font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; }
   td.price small { display: block; font-weight: 400; color: var(--ink-2); font-size: .82rem; white-space: normal; max-width: 14rem; margin-left: auto; }
   td .sub { display: block; color: var(--ink-2); font-size: .85rem; font-weight: 400; }
@@ -420,7 +420,7 @@
     thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
     tr:not(.grp) { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: .8rem; align-items: start; padding: .85rem 0; border-bottom: 1px solid var(--line); }
     td { display: block; padding: 0; border: 0; width: auto; }
-    td.price { text-align: right; max-width: 46vw; width: auto; }
+    td.price { text-align: right; max-width: 46vw; width: auto; min-width: 0; }
     td.price small { max-width: none; margin-left: 0; }
     tr.grp { display: block; padding: 1.4rem 0 .5rem; border-bottom: 2px solid var(--gold-soft); }
     tr.grp td { display: block; padding: 0; border: 0; }
