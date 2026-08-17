@@ -232,7 +232,7 @@
   @media (min-width: 880px) { .team-grid { grid-template-columns: .9fr 1.1fr; align-items: start; } }
   .portrait { width: 100%; height: auto; display: block; box-shadow: var(--shadow); }
   .team-people { display: grid; gap: 1.15rem; grid-template-columns: repeat(2, 1fr); margin-top: clamp(2rem, 4vw, 2.8rem); }
-  @media (min-width: 720px) { .team-people { grid-template-columns: repeat(5, 1fr); } }
+  @media (min-width: 720px) { .team-people { grid-template-columns: repeat(3, 1fr); max-width: 780px; } }
   .person { display: flex; flex-direction: column; gap: .45rem; }
   .person img { width: 100%; aspect-ratio: 13 / 16; object-fit: cover; display: block; }
   .person b { font-size: .98rem; }
@@ -279,6 +279,13 @@
   .fx-item img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; box-shadow: var(--shadow); }
   .fx-item figcaption { font-size: .85rem; color: var(--ink-2); }
   .fx-note { margin-top: 1.15rem; font-size: .88rem; color: var(--ink-3); max-width: none; }
+
+  /* ---------- gallery ---------- */
+  .gallery { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
+  @media (min-width: 760px) { .gallery { grid-template-columns: repeat(3, 1fr); } }
+  .gallery figure { margin: 0; display: flex; flex-direction: column; gap: .45rem; }
+  .gallery img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; box-shadow: var(--shadow); }
+  .gallery figcaption { font-size: .82rem; color: var(--ink-3); }
 
   /* ---------- pricing table ---------- */
   .table-scroll { overflow-x: auto; border: 1px solid var(--line); background: var(--surface); }
@@ -471,8 +478,8 @@
   <!-- TRUST -->
   <div class="trust">
     <div class="wrap trust-row">
-      <div class="trust-item"><b>16 lat</b><span>doświadczenia w&nbsp;branży</span></div>
-      <div class="trust-item"><!-- do potwierdzenia: 15 000+ klientek — można przywrócić po potwierdzeniu --><b class="num">7 kosmetolożek</b><span>oraz dyplomowana pielęgniarka w&nbsp;zespole</span></div>
+      <div class="trust-item"><b>od 2012</b><span>w Radomiu, nieprzerwanie</span></div>
+      <div class="trust-item"><b class="num">15 000+</b><span>klientek w&nbsp;naszej bazie</span></div>
       <div class="trust-item"><b class="num">4,5 / 5 <span class="stars" aria-hidden="true"><span class="stars-fill">★★★★★</span>★★★★★</span></b><span>średnia ocen w&nbsp;Google</span></div>
       <div class="trust-item"><b class="num">0 zł</b><span>za konsultację i&nbsp;próbę laserową</span></div>
     </div>
@@ -587,7 +594,6 @@
           <p class="eyebrow eyebrow-muted">Rekomendacja przy makijażu permanentnym</p>
           <h3>Makijaż permanentny brwi, ust i&nbsp;oczu</h3>
           <p>Zaczynamy od wizualizacji i&nbsp;geometrii: rysujemy kształt na Twojej twarzy i&nbsp;dobieramy kolor, zanim cokolwiek zostanie utrwalone. Dopiero po Twojej akceptacji wykonujemy zabieg. W&nbsp;cenie jest też dopigmentowanie, bo pełny efekt widać po korekcie w&nbsp;czwartym lub piątym tygodniu.</p>
-          <p>Stary makijaż permanentny, także wykonany w&nbsp;innym gabinecie, usuwamy laserem Q-switch.</p>
           <p class="who">Wykonuje: certyfikowana linergistka. Wizualizację możesz umówić osobno za 99 zł — kwotę odliczamy od ceny makijażu.</p>
           <a class="btn btn-primary" href="#kontakt" data-cta="panel-brwi">Umów wizualizację brwi — 99 zł</a>
         </div>
@@ -685,11 +691,11 @@
   <!-- TEAM -->
   <section id="zespol">
     <div class="wrap team-grid">
-      <img class="portrait" src="assets/kasia.jpg" alt="Katarzyna Bukowska, właścicielka Laser Clinic w Radomiu" width="900" height="1125" loading="lazy">
+      <img class="portrait" src="assets/kasia.jpg" alt="Katarzyna Bukowska, właścicielka Laser Clinic w Radomiu, kosmetolożka" width="900" height="1125" loading="lazy">
       <div class="team-copy">
         <p class="eyebrow">Zespół</p>
         <h2>Kto będzie się Tobą zajmować</h2>
-        <p>Laser Clinic prowadzi osobiście <strong>Katarzyna Bukowska</strong>: 16 lat praktyki i&nbsp;certyfikaty z&nbsp;każdego urządzenia, na którym pracuje. Kompetencje poszerza o&nbsp;studia pielęgniarskie. Na co dzień pracuje u&nbsp;nas siedem kosmetolożek z&nbsp;certyfikatami, a&nbsp;w&nbsp;zespole jest także dyplomowana pielęgniarka.</p>
+        <p>Laser Clinic prowadzi osobiście <strong>Katarzyna Bukowska</strong>: kosmetolożka z&nbsp;praktyką od 2012 roku i&nbsp;certyfikatami z&nbsp;każdego urządzenia, na którym pracuje. Kompetencje poszerza o&nbsp;studia pielęgniarskie. Na co dzień pracuje u&nbsp;nas siedem kosmetolożek z&nbsp;certyfikatami, a&nbsp;w&nbsp;zespole jest także dyplomowana pielęgniarka, Agata Romanowska.</p>
         <p>Każda osoba wykonująca zabiegi ma certyfikaty z&nbsp;obsługiwanych urządzeń i&nbsp;technik:</p>
         <ul class="badges">
           <li>depilacja laserowa</li>
@@ -706,18 +712,18 @@
           <li><b>RFrax (Medica)</b><span>frakcyjna radiofrekwencja mikroigłowa</span></li>
           <li><b>Super Veloce</b><span>światło szerokopasmowe</span></li>
           <li><b>LPG Integral</b><span>endermologia</span></li>
-          <li><b>HIFU Med</b><span>lifting bez skalpela</span></li>
-        </ul>
-        <p style="font-size:.9rem;color:var(--ink-3)">Chętnie pokażemy Ci certyfikaty i&nbsp;urządzenia na miejscu — zapytaj podczas konsultacji.</p>
+          <li><b>Storz Medical</b><span>fala uderzeniowa</span></li>
+          <li><b>Vitalift</b><span>lifting i&nbsp;ujędrnianie</span></li>
+                  </ul>
+        <p style="font-size:.9rem;color:var(--ink-3)">Depilację laserową LightSheer, światło szerokopasmowe Veloce, Vitalift i&nbsp;falę uderzeniową Storz wykonujemy na certyfikowanych wyrobach medycznych. Certyfikaty pokażemy Ci na miejscu.</p>
       </div>
     </div>
     <div class="wrap">
       <div class="team-people">
-        <figure class="person" style="margin:0"><img src="assets/anna.jpg" alt="Anna, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"><b>Anna</b><span>kosmetolożka</span></figure>
-        <figure class="person" style="margin:0"><img src="assets/magdalena.jpg" alt="Magdalena, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"><b>Magdalena</b><span>kosmetolożka</span></figure>
-        <figure class="person" style="margin:0"><img src="assets/alicja.jpg" alt="Alicja, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"><b>Alicja</b><span>kosmetolożka</span></figure>
-        <figure class="person" style="margin:0"><img src="assets/wioleta.jpg" alt="Wioleta, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"><b>Wioleta</b><span>kosmetolożka</span></figure>
-        <figure class="person" style="margin:0"><img src="assets/edyta.jpg" alt="Edyta, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"><b>Edyta</b><span>kosmetolożka</span></figure>
+        <!-- do uzupełnienia: zdjęcia pozostałych kosmetolożek od Kasi -->
+        <figure class="person" style="margin:0"><img src="assets/magdalena.jpg" alt="Magdalena Szczepińska, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"><b>Magdalena Szczepińska</b><span>kosmetolożka</span></figure>
+        <figure class="person" style="margin:0"><img src="assets/wioleta.jpg" alt="Wioleta Niewiadomska, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"><b>Wioleta Niewiadomska</b><span>kosmetolożka</span></figure>
+        <figure class="person" style="margin:0"><img src="assets/agata.jpg" alt="Agata Romanowska, kosmetolożka i pielęgniarka Laser Clinic Radom" width="720" height="900" loading="lazy"><b>Agata Romanowska</b><span>kosmetolożka i&nbsp;pielęgniarka</span></figure>
       </div>
     </div>
   </section>
@@ -739,8 +745,7 @@
             <li>RFrax Lift na zmarszczki, wiotkość i&nbsp;blizny</li>
             <li>laser tulowy na przebarwienia i&nbsp;teksturę</li>
             <li>Super Veloce na naczynka, rumień i&nbsp;koloryt</li>
-            <li>HIFU, czyli lifting bez skalpela</li>
-          </ul>
+                      </ul>
           <div class="price-line"><b class="num">od 699 zł</b><span>za zabieg w&nbsp;serii · programy od 2&nbsp;100 zł</span></div>
           <a class="btn btn-ghost" href="#kontakt" data-cta="card-odmladzanie">Umów bezpłatną konsultację programu</a>
           </div>
@@ -767,7 +772,7 @@
           <ul>
             <li>wizualizacja i&nbsp;geometria przed zabiegiem</li>
             <li>dopigmentowanie w&nbsp;cenie</li>
-            <li>laserowe usuwanie starego makijażu (laser Q-switch)</li>
+            <li>korekty i&nbsp;dopigmentowanie także makijażu z&nbsp;innych gabinetów</li>
           </ul>
           <div class="price-line"><b class="num">999 zł</b><span>brwi lub usta, z&nbsp;dopigmentowaniem (osobno 1&nbsp;297 zł) · kreski od 599 zł</span></div>
           <a class="btn btn-ghost" href="#kontakt" data-cta="card-pmu">Umów wizualizację brwi — 99 zł</a>
@@ -786,12 +791,33 @@
         <p class="section-lead">Zdjęcia pochodzą z&nbsp;naszego gabinetu i&nbsp;pokazują rzeczywiste klientki oraz efekty naszej pracy. Publikujemy je wyłącznie za zgodą.</p>
       </div>
       <div class="fx-grid">
-        <!-- do uzupełnienia: pary przed/po dla depilacji laserowej i RFrax od Kasi -->
-        <figure class="fx-item"><img src="assets/efekt1.jpg" alt="Lifting powiek Plazma ARC w Laser Clinic Radom, zdjęcia przed i po zabiegu" width="720" height="900" loading="lazy"><figcaption>Lifting powiek Plazma ARC, zdjęcia przed i&nbsp;po</figcaption></figure>
-        <figure class="fx-item"><img src="assets/efekt2.jpg" alt="Makijaż permanentny ust w Laser Clinic Radom, efekt po zabiegu" width="720" height="900" loading="lazy"><figcaption>Makijaż permanentny ust</figcaption></figure>
+        <figure class="fx-item"><img src="assets/fx-depilacja-broda.jpg" alt="Depilacja laserowa brody w Laser Clinic Radom, zdjęcie przed i po serii zabiegów" width="720" height="900" loading="lazy"><figcaption>Depilacja laserowa brody, przed i&nbsp;po serii</figcaption></figure>
+        <figure class="fx-item"><img src="assets/fx-naczynka.jpg" alt="Zamykanie naczynek na policzku w Laser Clinic Radom, przed i po zabiegu światłem" width="720" height="900" loading="lazy"><figcaption>Naczynka na policzku, przed i&nbsp;po zabiegu światłem</figcaption></figure>
+        <figure class="fx-item"><img src="assets/efekt1.jpg" alt="Lifting powiek Plazma ARC w Laser Clinic Radom, zdjęcia przed i po zabiegu" width="720" height="900" loading="lazy"><figcaption>Lifting powiek Plazma ARC, przed i&nbsp;po</figcaption></figure>
+        <figure class="fx-item"><img src="assets/fx-endermologia.jpg" alt="Endermologia LPG w Laser Clinic Radom, sylwetka przed i po serii zabiegów" width="720" height="900" loading="lazy"><figcaption>Endermologia LPG, przed i&nbsp;po serii</figcaption></figure>
+        <figure class="fx-item"><img src="assets/fx-depilacja-broda2.jpg" alt="Depilacja laserowa podbródka w Laser Clinic Radom, przed i po zabiegach" width="720" height="900" loading="lazy"><figcaption>Depilacja laserowa podbródka, przed i&nbsp;po</figcaption></figure>
         <figure class="fx-item"><img src="assets/efekt3.jpg" alt="Naturalny efekt makijażu permanentnego ust u klientki Laser Clinic Radom" width="720" height="900" loading="lazy"><figcaption>Makijaż permanentny ust u&nbsp;naszej klientki</figcaption></figure>
       </div>
       <p class="fx-note">Efekty zabiegów są indywidualne i&nbsp;zależą od skóry, liczby zabiegów oraz pielęgnacji. Więcej metamorfoz znajdziesz na naszym Instagramie: <a href="https://www.instagram.com/laserclinicradom/" rel="noopener" target="_blank" style="color:var(--accent-deep)">@laserclinicradom</a>.</p>
+    </div>
+  </section>
+
+  <!-- SALON -->
+  <section id="salon" style="background:var(--surface-2);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Salon</p>
+        <h2>Zajrzyj do nas, zanim przyjdziesz</h2>
+        <p class="section-lead">Salon przy ul. Witolda 3 w&nbsp;Radomiu: własne wejście, gabinety zabiegowe i&nbsp;urządzenia, na których pracujemy na co dzień. Parking płatny przed salonem albo bezpłatny na podwórku.</p>
+      </div>
+      <div class="gallery">
+        <figure><img src="assets/salon-front.jpg" alt="Wejście do salonu Laser Clinic przy ul. Witolda 3 w Radomiu" width="1200" height="800" loading="lazy"><figcaption>Wejście do salonu, ul. Witolda 3</figcaption></figure>
+        <figure><img src="assets/work-depilacja.jpg" alt="Depilacja laserowa LightSheer wykonywana w Laser Clinic Radom" width="900" height="675" loading="lazy"><figcaption>Depilacja laserowa LightSheer</figcaption></figure>
+        <figure><img src="assets/work-laser.jpg" alt="Zabieg światłem na skórę twarzy w Laser Clinic Radom" width="900" height="675" loading="lazy"><figcaption>Zabieg na skórę twarzy</figcaption></figure>
+        <figure><img src="assets/work-pmu.jpg" alt="Makijaż permanentny brwi wykonywany w Laser Clinic Radom" width="900" height="675" loading="lazy"><figcaption>Makijaż permanentny brwi</figcaption></figure>
+        <figure><img src="assets/dev-storz.jpg" alt="Storz Medical, fala uderzeniowa w Laser Clinic Radom" width="900" height="675" loading="lazy"><figcaption>Storz Medical, fala uderzeniowa</figcaption></figure>
+        <figure><img src="assets/work-rf.jpg" alt="Zabieg ujędrniający na dłoni w Laser Clinic Radom" width="900" height="675" loading="lazy"><figcaption>Zabieg ujędrniający na dłoniach</figcaption></figure>
+      </div>
     </div>
   </section>
 
@@ -832,7 +858,6 @@
             <tr><td>Kreski na oczach<span class="sub">w linii rzęs lub dolna 599 zł · eyeliner 799 zł · rozcieniowana 899 zł, ceny z korektą</span></td><td class="price num">od 599 zł</td></tr>
             <tr><td>Wizualizacja i&nbsp;geometria brwi jako osobna wizyta<span class="sub">kwotę odliczamy od ceny makijażu</span></td><td class="price num">99 zł</td></tr>
             <tr><td>Dopigmentowanie makijażu wykonanego w&nbsp;innym gabinecie</td><td class="price num">199 zł</td></tr>
-            <tr><td>Laserowe usuwanie makijażu permanentnego<span class="sub">laserem Q-switch; cena za zabieg, liczbę zabiegów oceniamy na konsultacji</span></td><td class="price num">300 zł</td></tr>
 
             <tr class="grp"><td colspan="2">Ciało</td></tr>
             <tr><td>Endermologia LPG Integral, jeden zabieg</td><td class="price num">169 zł<small>pakiety serii — na konsultacji</small></td></tr>
@@ -925,39 +950,25 @@
           </table></div>
         </details>
         <details>
-          <summary>Naczynka, przebarwienia i fotoodmładzanie IPL, HIFU oraz Plazma ARC</summary>
-          <p>Zamykanie naczynek, redukcja rumienia, usuwanie przebarwień i&nbsp;fotoodmładzanie światłem IPL w&nbsp;Radomiu, do tego HIFU, czyli lifting bez skalpela, oraz Plazma ARC na powieki i&nbsp;zmarszczki. Zaczynamy od próby IPL, żeby sprawdzić reakcję skóry.</p>
+          <summary>Naczynka, przebarwienia i fotoodmładzanie światłem szerokopasmowym oraz Plazma ARC</summary>
+          <p>Zamykanie naczynek, redukcja rumienia, usuwanie przebarwień i&nbsp;fotoodmładzanie światłem szerokopasmowym Veloce w&nbsp;Radomiu, do tego Plazma ARC na powieki i&nbsp;zmarszczki. Zaczynamy od próby, żeby sprawdzić reakcję skóry.</p>
           <div class="table-scroll" style="margin-bottom:1.2rem"><table>
             <tbody>
-<tr class="grp"><td colspan="2">IPL M22 – zamykanie naczynek · rumień i trądzik różowaty · usuwanie przebarwień · fotoodmładzanie</td></tr>
-<tr><td>IPL – Próba (bez usuwania zmiany)</td><td class="price num">49 zł</td></tr>
-<tr><td>IPL – Próba (z usunięciem pojedynczej zmiany)</td><td class="price num">149 zł</td></tr>
-<tr><td>IPL – Cała twarz<span class="sub">pakiet 3 zabiegów: 1&nbsp;349 zł · pakiet 6 zabiegów: 2&nbsp;389 zł</span></td><td class="price num">499 zł</td></tr>
-<tr><td>IPL – Czoło<span class="sub">pakiet 3 zabiegów: 669 zł · pakiet 6 zabiegów: 1&nbsp;189 zł</span></td><td class="price num">249 zł</td></tr>
-<tr><td>IPL – Policzki<span class="sub">pakiet 3 zabiegów: 939 zł · pakiet 6 zabiegów: 1&nbsp;669 zł</span></td><td class="price num">349 zł</td></tr>
-<tr><td>IPL – Nos<span class="sub">pakiet 3 zabiegów: od 669 do 809 zł · pakiet 6 zabiegów: od 1&nbsp;189 do 1&nbsp;429 zł</span></td><td class="price num">od 249 do 299 zł</td></tr>
-<tr><td>IPL – Broda<span class="sub">pakiet 3 zabiegów: od 669 do 809 zł · pakiet 6 zabiegów: od 1&nbsp;189 do 1&nbsp;429 zł</span></td><td class="price num">249 zł</td></tr>
-<tr><td>IPL – Szyja<span class="sub">pakiet 3 zabiegów: 1&nbsp;349 zł · pakiet 6 zabiegów: 2&nbsp;389 zł</span></td><td class="price num">499 zł</td></tr>
-<tr><td>IPL – Dekolt<span class="sub">pakiet 3 zabiegów: 1&nbsp;349 zł · pakiet 6 zabiegów: 2&nbsp;389 zł</span></td><td class="price num">499 zł</td></tr>
-<tr><td>IPL – Szyja + dekolt<span class="sub">pakiet 3 zabiegów: 2&nbsp;019 zł · pakiet 6 zabiegów: 3&nbsp;589 zł</span></td><td class="price num">749 zł</td></tr>
-<tr><td>IPL – Twarz + szyja + dekolt<span class="sub">pakiet 3 zabiegów: 2&nbsp;699 zł · pakiet 6 zabiegów: 4&nbsp;789 zł</span></td><td class="price num">999 zł</td></tr>
-<tr><td>IPL – Plecy<span class="sub">pakiet 3 zabiegów: 2&nbsp;699 zł · pakiet 6 zabiegów: 4&nbsp;789 zł</span></td><td class="price num">999 zł</td></tr>
-<tr><td>IPL – Ramiona<span class="sub">pakiet 3 zabiegów: 1&nbsp;349 zł · pakiet 6 zabiegów: 2&nbsp;389 zł</span></td><td class="price num">499 zł</td></tr>
-<tr><td>IPL – Przedramiona<span class="sub">pakiet 3 zabiegów: 669 zł · pakiet 6 zabiegów: 1&nbsp;189 zł</span></td><td class="price num">249 zł</td></tr>
-<tr class="grp"><td colspan="2">HIFU Med – lifting bez skalpela</td></tr>
-<tr><td>Uda – HIFU</td><td class="price num">2&nbsp;499 zł</td></tr>
-<tr><td>Dekolt – HIFU</td><td class="price num">999 zł</td></tr>
-<tr><td>Motylki – HIFU</td><td class="price num">799 zł</td></tr>
-<tr><td>Kolana – HIFU</td><td class="price num">1&nbsp;499 zł</td></tr>
-<tr><td>Brzuch + boczki – HIFU</td><td class="price num">2&nbsp;199 zł</td></tr>
-<tr><td>Brzuch – HIFU</td><td class="price num">1&nbsp;299 zł</td></tr>
-<tr><td>Szyja + podbródek – HIFU</td><td class="price num">999 zł</td></tr>
-<tr><td>Szyja – HIFU</td><td class="price num">599 zł</td></tr>
-<tr><td>Policzki – HIFU</td><td class="price num">799 zł</td></tr>
-<tr><td>Podbródek – HIFU</td><td class="price num">499 zł</td></tr>
-<tr><td>Dolna powieka – HIFU</td><td class="price num">199 zł</td></tr>
-<tr><td>Podniesienie powiek – HIFU (w linii czoła)</td><td class="price num">299 zł</td></tr>
-<tr><td>Ramiona/pelikany – HIFU</td><td class="price num">1&nbsp;399 zł</td></tr>
+<tr class="grp"><td colspan="2">Światło szerokopasmowe Veloce: naczynka, rumień, przebarwienia, fotoodmładzanie</td></tr>
+<tr><td>Próba światłem (bez usuwania zmiany)</td><td class="price num">49 zł</td></tr>
+<tr><td>Próba światłem (z usunięciem pojedynczej zmiany)</td><td class="price num">149 zł</td></tr>
+<tr><td>Veloce – Cała twarz<span class="sub">pakiet 3 zabiegów: 1&nbsp;349 zł · pakiet 6 zabiegów: 2&nbsp;389 zł</span></td><td class="price num">499 zł</td></tr>
+<tr><td>Veloce – Czoło<span class="sub">pakiet 3 zabiegów: 669 zł · pakiet 6 zabiegów: 1&nbsp;189 zł</span></td><td class="price num">249 zł</td></tr>
+<tr><td>Veloce – Policzki<span class="sub">pakiet 3 zabiegów: 939 zł · pakiet 6 zabiegów: 1&nbsp;669 zł</span></td><td class="price num">349 zł</td></tr>
+<tr><td>Veloce – Nos<span class="sub">pakiet 3 zabiegów: od 669 do 809 zł · pakiet 6 zabiegów: od 1&nbsp;189 do 1&nbsp;429 zł</span></td><td class="price num">od 249 do 299 zł</td></tr>
+<tr><td>Veloce – Broda<span class="sub">pakiet 3 zabiegów: od 669 do 809 zł · pakiet 6 zabiegów: od 1&nbsp;189 do 1&nbsp;429 zł</span></td><td class="price num">249 zł</td></tr>
+<tr><td>Veloce – Szyja<span class="sub">pakiet 3 zabiegów: 1&nbsp;349 zł · pakiet 6 zabiegów: 2&nbsp;389 zł</span></td><td class="price num">499 zł</td></tr>
+<tr><td>Veloce – Dekolt<span class="sub">pakiet 3 zabiegów: 1&nbsp;349 zł · pakiet 6 zabiegów: 2&nbsp;389 zł</span></td><td class="price num">499 zł</td></tr>
+<tr><td>Veloce – Szyja + dekolt<span class="sub">pakiet 3 zabiegów: 2&nbsp;019 zł · pakiet 6 zabiegów: 3&nbsp;589 zł</span></td><td class="price num">749 zł</td></tr>
+<tr><td>Veloce – Twarz + szyja + dekolt<span class="sub">pakiet 3 zabiegów: 2&nbsp;699 zł · pakiet 6 zabiegów: 4&nbsp;789 zł</span></td><td class="price num">999 zł</td></tr>
+<tr><td>Veloce – Plecy<span class="sub">pakiet 3 zabiegów: 2&nbsp;699 zł · pakiet 6 zabiegów: 4&nbsp;789 zł</span></td><td class="price num">999 zł</td></tr>
+<tr><td>Veloce – Ramiona<span class="sub">pakiet 3 zabiegów: 1&nbsp;349 zł · pakiet 6 zabiegów: 2&nbsp;389 zł</span></td><td class="price num">499 zł</td></tr>
+<tr><td>Veloce – Przedramiona<span class="sub">pakiet 3 zabiegów: 669 zł · pakiet 6 zabiegów: 1&nbsp;189 zł</span></td><td class="price num">249 zł</td></tr>
 <tr class="grp"><td colspan="2">Plazma ARC – lifting</td></tr>
 <tr><td>Górna powieka – Plazma ARC</td><td class="price num">599 zł</td></tr>
 <tr><td>Powieka dolna – Plazma ARC</td><td class="price num">499 zł</td></tr>
@@ -1110,8 +1121,8 @@
           </table></div>
         </details>
         <details>
-          <summary>Peelingi chemiczne, Dermaquest, Bio Peeling i laserowy peeling węglowy</summary>
-          <p>Pełna półka peelingów: od klasycznych kwasów, przez linie Dermaquest i&nbsp;ziołowy Bio Peeling, po laserowy peeling węglowy Black Doll na laserze Q-switch.</p>
+          <summary>Peelingi chemiczne, Dermaquest i Bio Peeling</summary>
+          <p>Pełna półka peelingów: od klasycznych kwasów, przez linie Dermaquest i&nbsp;ziołowy Bio Peeling, po ziołowe i&nbsp;enzymatyczne formuły dla wrażliwej skóry.</p>
           <div class="table-scroll" style="margin-bottom:1.2rem"><table>
             <tbody>
 <tr class="grp"><td colspan="2">PEELING CHEMICZNY</td></tr>
@@ -1155,10 +1166,6 @@
 <tr><td>Bio Peeling – Całe uda</td><td class="price num">599 zł</td></tr>
 <tr><td>Bio Peeling – Całe uda + pośladki</td><td class="price num">899 zł</td></tr>
 <tr><td>Bio Peeling – Dołuszczanie</td><td class="price num">199 zł</td></tr>
-<tr class="grp"><td colspan="2">BLACK DOLL – laserowy peeling węglowy</td></tr>
-<tr><td>Black Doll – Cała twarz<span class="sub">pakiet 3 zabiegów: 669 zł</span></td><td class="price num">249 zł</td></tr>
-<tr><td>Black Doll – Twarz + szyja + dekolt<span class="sub">pakiet 3 zabiegów: 939 zł</span></td><td class="price num">349 zł</td></tr>
-<tr><td>Black Doll – Plecy<span class="sub">pakiet 3 zabiegów: 1&nbsp;079 zł</span></td><td class="price num">399 zł</td></tr>
             </tbody>
           </table></div>
         </details>
@@ -1355,7 +1362,7 @@
         </details>
         <details>
           <summary>Czy zabiegi wykonuje lekarz?</summary>
-          <p>Nie — zabiegi wykonują dyplomowane kosmetolożki, a&nbsp;w&nbsp;zespole jest także dyplomowana pielęgniarka. Przed każdą serią przeprowadzamy kwalifikację i&nbsp;próbę laserową, a&nbsp;jeśli cokolwiek po zabiegu Cię zaniepokoi, skontaktuj się z&nbsp;nami — obejrzymy skórę na wizycie kontrolnej. Przy objawach, które wymagają leczenia, takich jak oparzenie czy pęcherze, od razu kierujemy do lekarza. Przy zmianach skórnych wymagających diagnozy lekarskiej wprost mówimy, że najpierw potrzebna jest wizyta u&nbsp;dermatologa.</p>
+          <p>Nie — zabiegi wykonują dyplomowane kosmetolożki, a&nbsp;w&nbsp;zespole jest także dyplomowana pielęgniarka. Przed każdą serią przeprowadzamy kwalifikację i&nbsp;próbę laserową, a&nbsp;jeśli cokolwiek po zabiegu Cię zaniepokoi, skontaktuj się z&nbsp;nami — bezpłatnie obejrzymy skórę na wizycie kontrolnej. Przy objawach, które wymagają leczenia, takich jak oparzenie czy pęcherze, od razu kierujemy do lekarza. Przy zmianach skórnych wymagających diagnozy lekarskiej wprost mówimy, że najpierw potrzebna jest wizyta u&nbsp;dermatologa.</p>
         </details>
         <details>
           <summary>Ile zabiegów będę potrzebować?</summary>
@@ -1419,9 +1426,9 @@
           <div><dt>Adres</dt><dd>ul. Witolda 3, 26-600 Radom<br><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Laser+Clinic+ul.+Witolda+3+Radom" rel="noopener" target="_blank">Wyznacz trasę w&nbsp;Google Maps</a></dd></div>
           <div><dt>Godziny otwarcia</dt><dd>pn–pt 8:00–20:00<br>sobota 8:00–15:00</dd></div>
           <div><dt>Telefony</dt><dd class="num"><a href="tel:+48483121551">tel. (48) 312 15 51</a> — recepcja<br><a href="tel:+48533310316">tel. 533 310 316</a> — komórkowy</dd></div>
-          <div><dt>E-mail</dt><dd><a href="mailto:biuro@laser-clinic.pl">biuro@laser-clinic.pl</a></dd></div>
+          <div><dt>Zapisy</dt><dd>telefonicznie, recepcja odbiera pn–pt 8:00–20:00 i&nbsp;w&nbsp;soboty 8:00–15:00<!-- do uzupełnienia: nowy adres e-mail od Kasi --></dd></div>
           <div><dt>Instagram</dt><dd><a href="https://www.instagram.com/laserclinicradom/" rel="noopener" target="_blank">@laserclinicradom</a></dd></div>
-          <div><dt>Parking i&nbsp;dojazd</dt><dd><span class="todo">do uzupełnienia</span></dd></div>
+          <div><dt>Parking</dt><dd>płatny przed salonem albo bezpłatny na podwórku przy salonie</dd></div>
         </dl>
       </div>
       <form class="callback" id="callback-form">
@@ -1456,14 +1463,13 @@
       <div class="foot-col">
         <b>Laser Clinic Katarzyna Bukowska</b>
         <span>ul. Witolda 3, 26-600 Radom</span>
-        <span class="num">NIP: <span class="todo">do uzupełnienia</span></span>
+        <span class="num">NIP: 796-282-40-38</span>
         <span>pn–pt 8:00–20:00, sob 8:00–15:00</span>
       </div>
       <div class="foot-col">
         <b>Kontakt</b>
         <a class="num" href="tel:+48483121551">tel. (48) 312 15 51</a>
         <a class="num" href="tel:+48533310316">tel. 533 310 316</a>
-        <a href="mailto:biuro@laser-clinic.pl">biuro@laser-clinic.pl</a>
         <a href="https://www.instagram.com/laserclinicradom/" rel="noopener" target="_blank">Instagram: @laserclinicradom</a>
       </div>
       <div class="foot-col">
@@ -1471,6 +1477,7 @@
         <a href="#zabiegi">Dobór zabiegu</a>
         <a href="#cennik">Cennik</a>
         <a href="#pelna-oferta">Pełna oferta zabiegów</a>
+        <a href="#salon">Salon</a>
         <a href="#opinie">Opinie</a>
         <a href="#kontakt">Kontakt</a>
         <span>Polityka prywatności <span class="todo">do uzupełnienia</span></span>
@@ -1495,7 +1502,6 @@
   "name": "Laser Clinic Katarzyna Bukowska",
   "url": "https://laserclinic.radom.pl/",
   "telephone": "+48483121551",
-  "email": "biuro@laser-clinic.pl",
   "priceRange": "99 - 5000+ PLN",
   "address": {
     "@type": "PostalAddress",
@@ -1521,8 +1527,7 @@
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Super Veloce — światło szerokopasmowe" }, "priceCurrency": "PLN", "price": "2000" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Makijaż permanentny brwi lub ust" }, "priceCurrency": "PLN", "price": "999" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Endermologia LPG Integral" }, "priceCurrency": "PLN", "price": "169" },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Laserowe oczyszczanie skóry Q-switch z peelingiem węglowym" }, "priceCurrency": "PLN", "price": "249" },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fotoodmładzanie IPL" }, "priceCurrency": "PLN", "price": "499" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fotoodmładzanie światłem szerokopasmowym Veloce" }, "priceCurrency": "PLN", "price": "499" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Laminacja brwi" }, "priceCurrency": "PLN", "price": "149" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mezoterapia igłowa" }, "priceCurrency": "PLN", "price": "349" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kriolipoliza LipoCryo" }, "priceCurrency": "PLN", "price": "149" }
