@@ -230,11 +230,11 @@
   /* ---------- team ---------- */
   .team-grid { display: grid; gap: clamp(1.6rem, 4vw, 3rem); grid-template-columns: 1fr; }
   @media (min-width: 880px) { .team-grid { grid-template-columns: .9fr 1.1fr; align-items: start; } }
-  .portrait { width: 100%; height: auto; display: block; box-shadow: var(--shadow); }
+  .portrait { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; display: block; box-shadow: var(--shadow); }
   .team-people { display: grid; gap: 1.15rem; grid-template-columns: repeat(2, 1fr); margin-top: clamp(2rem, 4vw, 2.8rem); }
   @media (min-width: 720px) { .team-people { grid-template-columns: repeat(3, 1fr); max-width: 780px; } }
   .person { display: flex; flex-direction: column; gap: .45rem; }
-  .person img { width: 100%; aspect-ratio: 13 / 16; object-fit: cover; display: block; }
+  .person img { width: 100%; height: auto; aspect-ratio: 13 / 16; object-fit: cover; display: block; }
   .person b { font-size: .98rem; }
   .person span { font-size: .82rem; color: var(--ink-3); }
   .team-copy { display: flex; flex-direction: column; gap: 1.1rem; }
@@ -259,7 +259,7 @@
     display: flex; flex-direction: column;
   }
   .card .visual {
-    width: 100%; height: clamp(170px, 16vw, 230px);
+    width: 100%; height: clamp(170px, 16vw, 230px); aspect-ratio: auto;
     object-fit: cover; display: block; flex: none;
   }
   .card .card-body {
@@ -285,7 +285,7 @@
   .gallery { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; }
   @media (min-width: 760px) { .gallery { grid-template-columns: repeat(3, 1fr); } }
   .gallery figure { margin: 0; display: flex; flex-direction: column; gap: .45rem; }
-  .gallery img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; object-position: center 35%; display: block; box-shadow: var(--shadow); }
+  .gallery img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: center 35%; display: block; box-shadow: var(--shadow); }
   .gallery figcaption { font-size: .82rem; color: var(--ink-3); }
 
   /* ---------- pricing table ---------- */
