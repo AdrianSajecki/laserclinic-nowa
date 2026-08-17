@@ -179,10 +179,11 @@
     border-bottom: 1px solid color-mix(in srgb, var(--plum-ink) 14%, transparent);
   }
   .plan-variants li:last-child { border-bottom: 0; }
-  .plan-variants .v-name { display: flex; flex-direction: column; gap: .1rem; }
+  .plan-variants .v-name { display: flex; flex-direction: column; gap: .1rem; min-width: 0; flex: 1 1 auto; }
   .plan-variants .v-name b { letter-spacing: .06em; font-size: .78rem; text-transform: uppercase; color: var(--plum-accent); }
   .plan-variants .v-name span { color: color-mix(in srgb, var(--plum-ink) 72%, transparent); font-size: .85rem; }
-  .plan-variants .v-price { font-family: var(--font-display); font-size: 1.25rem; white-space: nowrap; }
+  .plan-variants .v-price { font-family: var(--font-display); font-size: 1.25rem; white-space: nowrap; flex: none; text-align: right; }
+  .plan-variants .v-price-text { font-size: .95rem; font-family: var(--font-body); font-weight: 600; letter-spacing: .01em; color: var(--plum-accent); max-width: 9rem; white-space: normal; line-height: 1.25; }
   .hero-card .card-note { font-size: .85rem; color: color-mix(in srgb, var(--plum-ink) 62%, transparent); }
   .hero-card .btn { align-self: flex-start; }
 
@@ -537,12 +538,12 @@
             <span class="v-price num">1&nbsp;749 zł</span>
           </li>
           <li>
-            <span class="v-name"><b>Optymalny · najczęściej wybierany</b><span>jędrność i&nbsp;koloryt: RFrax Lift + laser tulowy, 5 zabiegów</span></span>
+            <span class="v-name"><b>Optymalny · najczęściej wybierany</b><span>jędrność i&nbsp;koloryt: 3× RFrax Lift + 2× laser tulowy</span></span>
             <span class="v-price num">3&nbsp;349 zł</span>
           </li>
           <li>
-            <span class="v-name"><b>Premium</b><span>pełna odnowa skóry: światło szerokopasmowe + serie RFrax Lift lub lasera tulowego</span></span>
-            <span class="v-price num">wycena indywidualna</span>
+            <span class="v-name"><b>Premium</b><span>pełna odnowa: światło szerokopasmowe + serie zabiegów</span></span>
+            <span class="v-price v-price-text">wycena na konsultacji</span>
           </li>
         </ul>
         <p class="card-note">Płacisz przy kolejnych wizytach, nie z&nbsp;góry za cały program. A&nbsp;co dokładnie znajdzie się w&nbsp;Twoim planie, ustalamy dopiero po obejrzeniu skóry na konsultacji.</p>
@@ -751,8 +752,8 @@
             <li>opcjonalnie mezoterapia igłowa</li>
           </ul>
           <div class="v-sum">
-            <b class="num">wycena indywidualna</b>
-            <small>skład i&nbsp;cenę ustalamy na konsultacji</small>
+            <b style="font-size:1.25rem">wycena na konsultacji</b>
+            <small>skład i&nbsp;cenę ustalamy po obejrzeniu skóry</small>
           </div>
         </article>
       </div>
@@ -926,7 +927,7 @@
             <tr class="grp"><td colspan="2">Roczny Program Odmładzania</td></tr>
             <tr><td>Program Start<span class="sub">3× RFrax Lift + kontrola</span></td><td class="price num">1&nbsp;749 zł<small>osobno: 1&nbsp;947 zł</small></td></tr>
             <tr><td>Program Optymalny<span class="sub">3× RFrax Lift + 2× laser tulowy + kontrole</span></td><td class="price num">3&nbsp;349 zł<small>osobno: 3&nbsp;947 zł</small></td></tr>
-            <tr><td>Program Premium<span class="sub">ze światłem szerokopasmowym, skład indywidualny</span></td><td class="price num">wycena indywidualna</td></tr>
+            <tr><td>Program Premium<span class="sub">ze światłem szerokopasmowym, skład indywidualny</span></td><td class="price num" style="font-size:.9rem;white-space:normal">wycena na konsultacji</td></tr>
 
             <tr class="grp"><td colspan="2">Zabiegi na skórę twarzy</td></tr>
             <!-- do uzupełnienia: cena światła szerokopasmowego Veloce z finalnego cennika -->
