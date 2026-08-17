@@ -118,7 +118,7 @@
   .site-nav { display: none; gap: 1.1rem; margin-inline: 2rem auto; }
   .site-nav a { font-size: .92rem; font-weight: 600; text-decoration: none; color: var(--ink-2); padding: .3rem 0; border-bottom: 2px solid transparent; white-space: nowrap; }
   .site-nav a:hover { color: var(--accent-deep); border-bottom-color: var(--accent); }
-  @media (min-width: 1100px) { .site-nav { display: flex; } .head-tel small { display: none; } .head-actions { gap: 1rem; } .head-actions .btn { padding: .8rem 1.1rem; font-size: .9rem; white-space: nowrap; } .brand img { height: 38px; } }
+  @media (min-width: 1000px) { .site-nav { display: flex; } .head-tel small { display: none; } .head-actions { gap: 1rem; } .head-actions .btn { padding: .8rem 1.1rem; font-size: .9rem; white-space: nowrap; } .brand img { height: 38px; } }
   @media (min-width: 1280px) { .site-nav { gap: 1.35rem; } .head-tel small { display: block; } .head-actions .btn { padding: .95rem 1.4rem; font-size: .95rem; } }
   .nav-toggle {
     display: none; width: 44px; height: 44px; padding: 10px; border: 1px solid var(--line-strong); border-radius: 2px;
@@ -128,7 +128,7 @@
   .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
   .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
   .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
-  @media (max-width: 1099px) {
+  @media (max-width: 999px) {
     .nav-toggle { display: flex; }
     .site-nav { margin: 0; }
     .site-nav.open {
@@ -455,9 +455,6 @@
       <a href="#pelna-oferta">Cennik</a>
       <a href="#efekty">Efekty</a>
       <a href="#zespol">Zespół</a>
-      <a href="#salon">Salon</a>
-      <a href="#opinie">Opinie</a>
-      <a href="#kontakt">Kontakt</a>
     </nav>
     <div class="head-actions">
       <a class="head-tel num" href="tel:+48483121551" data-cta="header-tel">tel. (48)&nbsp;312&nbsp;15&nbsp;51
@@ -1488,7 +1485,7 @@
         </label>
         <button class="btn btn-primary" type="submit" data-cta="callback">Poproszę o&nbsp;telefon</button>
         <p class="form-msg" id="form-msg" role="status"></p>
-        <p class="rodo">Administratorem danych jest Laser Clinic Katarzyna Bukowska, ul. Witolda 3, 26-600 Radom. Podane dane (imię, numer telefonu i&nbsp;temat rozmowy) wykorzystamy wyłącznie po to, żeby oddzwonić w&nbsp;sprawie wizyty. Podanie danych jest dobrowolne. Szczegóły, w&nbsp;tym przysługujące Ci prawa, opisujemy w&nbsp;polityce prywatności.</p>
+        <p class="rodo">Administratorem danych jest Laser Clinic Katarzyna Bukowska, ul. Witolda 3, 26-600 Radom. Podane dane (imię, numer telefonu i&nbsp;temat rozmowy) wykorzystamy wyłącznie po to, żeby oddzwonić w&nbsp;sprawie wizyty. Podanie danych jest dobrowolne. Masz prawo dostępu do swoich danych, ich poprawienia i&nbsp;usunięcia; wystarczy telefon do salonu.</p>
       </form>
     </div>
   </section>
@@ -1518,7 +1515,6 @@
         <a href="#salon">Salon</a>
         <a href="#opinie">Opinie</a>
         <a href="#kontakt">Kontakt</a>
-        <span>Polityka prywatności <span class="todo">do uzupełnienia</span></span>
       </div>
     </div>
     <div class="foot-meta">
