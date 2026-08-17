@@ -363,9 +363,6 @@
   @media (min-width: 880px) { .team-people { grid-template-columns: repeat(3, 1fr); } }
   .person { display: flex; flex-direction: column; gap: .45rem; }
   .person .ph { display: block; overflow: hidden; box-shadow: var(--shadow); position: relative; }
-  .person { position: relative; padding-right: 8px; }
-  .person::before { content: ""; position: absolute; left: 8px; top: 8px; right: 0; aspect-ratio: 4 / 5; border: 1px solid var(--gold); pointer-events: none; z-index: 0; }
-  .person .ph { z-index: 1; margin-right: 8px; }
   .person img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: var(--pos, 50% 18%); display: block; filter: saturate(.94); }
   .person b { font-family: var(--font-display); font-weight: 400; font-size: 1.1rem; margin-top: .3rem; }
   @media (max-width: 719px) { .person b { font-family: var(--font-body); font-weight: 600; font-size: .92rem; } .portrait { max-height: 52vh; } }
