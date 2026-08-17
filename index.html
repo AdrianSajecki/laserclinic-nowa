@@ -310,6 +310,9 @@
   .gallery img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; object-position: center 35%; display: block; box-shadow: var(--shadow); }
   .gallery figcaption { font-size: .82rem; color: var(--ink-3); }
 
+  .brwi-gal { display: grid; grid-template-columns: repeat(3, 1fr); gap: .8rem; margin: .4rem 0 1.2rem; max-width: 640px; }
+  .brwi-gal img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; display: block; box-shadow: var(--shadow); }
+
   /* ---------- pricing table ---------- */
   .table-scroll { overflow-x: auto; border: 1px solid var(--line); background: var(--surface); }
   table { border-collapse: collapse; width: 100%; min-width: 560px; font-size: .95rem; }
@@ -518,8 +521,8 @@
             <span class="v-price num">3&nbsp;349 zł</span>
           </li>
           <li>
-            <span class="v-name"><b>Premium</b><span>pełna odnowa skóry: Super Veloce + serie RFrax Lift lub lasera tulowego</span></span>
-            <span class="v-price num">od 5&nbsp;000 zł</span>
+            <span class="v-name"><b>Premium</b><span>pełna odnowa skóry: światło szerokopasmowe + serie RFrax Lift lub lasera tulowego</span></span>
+            <span class="v-price num">wycena indywidualna</span>
           </li>
         </ul>
         <p class="card-note">Płacisz przy kolejnych wizytach, nie z&nbsp;góry za cały program. A&nbsp;co dokładnie znajdzie się w&nbsp;Twoim planie, ustalamy dopiero po obejrzeniu skóry na konsultacji.</p>
@@ -601,7 +604,7 @@
           <a class="btn btn-primary" href="#kontakt" data-cta="panel-naczynka">Umów bezpłatną konsultację</a>
         </div>
         <div class="concern-side">
-          <div class="spec"><dt>Cena</dt><dd class="big num">2&nbsp;000 zł <small>· protokół całej twarzy</small></dd></div>
+          <div class="spec"><dt>Cena</dt><dd class="big num" style="font-size:1.15rem">cena wg aktualnego cennika <small>· potwierdzamy na konsultacji</small></dd></div>
           <div class="spec"><dt>Plan</dt><dd>1 do 3 zabiegów; przebarwienia bledną zwykle już po pierwszym, utrwalony rumień i&nbsp;naczynka częściej po 2 do 3</dd></div>
           <div class="spec"><dt>Odstęp między zabiegami</dt><dd>3 do 4 tygodni</dd></div>
           <div class="spec"><dt>Efekty</dt><dd>narastają z&nbsp;każdym tygodniem po zabiegu</dd></div>
@@ -723,13 +726,13 @@
         <article class="vcard">
           <h3>Program Premium</h3>
           <ul>
-            <li>protokół Super Veloce (cała twarz)</li>
+            <li>światło szerokopasmowe na całą twarz</li>
             <li>serie RFrax Lift lub lasera tulowego, dobór na konsultacji</li>
             <li>opcjonalnie mezoterapia igłowa</li>
           </ul>
           <div class="v-sum">
-            <b class="num">od 5&nbsp;000 zł</b>
-            <small>skład i&nbsp;wycena indywidualnie na konsultacji</small>
+            <b class="num">wycena indywidualna</b>
+            <small>skład i&nbsp;cenę ustalamy na konsultacji</small>
           </div>
         </article>
       </div>
@@ -845,6 +848,12 @@
       </div>
       <div class="loop" data-loop="efekty">
       <div class="loop-track cols-1">
+        <figure class="fx-item"><img src="assets/fx-rfrax-oko.jpg" alt="RFrax w Laser Clinic Radom, zmarszczki przy oku przed i po 3 zabiegach" width="640" height="603" loading="lazy"><figcaption>RFrax, zmarszczki przy oku po 3 zabiegach</figcaption></figure>
+        <figure class="fx-item"><img src="assets/fx-ipl-przebarwienia.jpg" alt="Przebarwienia na twarzy przed i po 3 zabiegach światłem w Laser Clinic Radom" width="640" height="800" loading="lazy"><figcaption>Przebarwienia, po 3 zabiegach światłem</figcaption></figure>
+        <figure class="fx-item"><img src="assets/fx-ipl-naczynka2.jpg" alt="Naczynka na policzku przed i po 3 zabiegach światłem w Laser Clinic Radom" width="640" height="800" loading="lazy"><figcaption>Naczynka na policzku, po 3 zabiegach światłem</figcaption></figure>
+        <figure class="fx-item"><img src="assets/fx-ipl-rumien.jpg" alt="Rumień na policzku przed i po 3 zabiegach światłem w Laser Clinic Radom" width="450" height="800" loading="lazy"><figcaption>Rumień, po 3 zabiegach światłem</figcaption></figure>
+        <figure class="fx-item"><img src="assets/fx-ipl-nos.jpg" alt="Naczynka na nosie przed i po 3 zabiegach światłem w Laser Clinic Radom" width="450" height="800" loading="lazy"><figcaption>Naczynka na nosie, po 3 zabiegach światłem</figcaption></figure>
+        <figure class="fx-item"><img src="assets/fx-depilacja-pachy.jpg" alt="Depilacja laserowa pach LightSheer w Laser Clinic Radom, przed i po 3 zabiegach" width="640" height="800" loading="lazy"><figcaption>Depilacja laserowa pach, po 3 zabiegach</figcaption></figure>
         <figure class="fx-item"><img src="assets/fx-depilacja-broda.jpg" alt="Depilacja laserowa brody LightSheer w Laser Clinic Radom, efekt po 3 zabiegach" width="640" height="640" loading="lazy"><figcaption>Depilacja laserowa brody LightSheer, efekt po 3 zabiegach</figcaption></figure>
         <figure class="fx-item"><img src="assets/fx-naczynka.jpg" alt="Zamykanie naczynek na policzku w Laser Clinic Radom, efekt po jednym zabiegu światłem szerokopasmowym" width="640" height="800" loading="lazy"><figcaption>Zamykanie naczynek, efekt po jednym zabiegu światłem</figcaption></figure>
         <figure class="fx-item"><img src="assets/efekt1.jpg" alt="Lifting powiek Plazma ARC w Laser Clinic Radom, zdjęcia przed i po zabiegu" width="600" height="800" loading="lazy"><figcaption>Lifting powiek Plazma ARC, przed i&nbsp;po</figcaption></figure>
@@ -897,10 +906,10 @@
             <tr class="grp"><td colspan="2">Roczny Program Odmładzania</td></tr>
             <tr><td>Program Start<span class="sub">3× RFrax Lift + kontrola</span></td><td class="price num">1&nbsp;749 zł<small>osobno: 1&nbsp;947 zł</small></td></tr>
             <tr><td>Program Optymalny<span class="sub">3× RFrax Lift + 2× laser tulowy + kontrole</span></td><td class="price num">3&nbsp;349 zł<small>osobno: 3&nbsp;947 zł</small></td></tr>
-            <tr><td>Program Premium<span class="sub">z protokołem Super Veloce, skład indywidualny</span></td><td class="price num">od 5&nbsp;000 zł</td></tr>
+            <tr><td>Program Premium<span class="sub">ze światłem szerokopasmowym, skład indywidualny</span></td><td class="price num">wycena indywidualna</td></tr>
 
             <tr class="grp"><td colspan="2">Zabiegi na skórę twarzy</td></tr>
-            <tr><td>Super Veloce, światło szerokopasmowe<span class="sub">protokół całej twarzy: naczynka, rumień i&nbsp;koloryt w&nbsp;jednym zabiegu</span></td><td class="price num">2&nbsp;000 zł</td></tr>
+            <!-- do uzupełnienia: cena światła szerokopasmowego Veloce z finalnego cennika -->
             <tr><td>RFrax Lift, frakcyjna radiofrekwencja mikroigłowa, cała twarz</td><td class="price num">649 zł<small>pakiet 3 zabiegów: 1&nbsp;749 zł</small></td></tr>
             <tr><td>Laser tulowy, twarz</td><td class="price num">1&nbsp;000 zł<small>w serii od 2 zabiegów: 800 zł</small></td></tr>
             <tr><td>Mezoterapia igłowa<span class="sub">cena zależna od preparatu, potwierdzamy na konsultacji</span></td><td class="price num">od 349 zł</td></tr>
@@ -1013,21 +1022,21 @@
           <p>Zamykanie naczynek, redukcja rumienia, usuwanie przebarwień i&nbsp;fotoodmładzanie światłem szerokopasmowym Veloce w&nbsp;Radomiu, do tego Plazma ARC na powieki i&nbsp;zmarszczki. Zaczynamy od próby, żeby sprawdzić reakcję skóry.</p>
           <div class="table-scroll" style="margin-bottom:1.2rem"><table>
             <tbody>
-<tr class="grp"><td colspan="2">Światło szerokopasmowe Veloce: naczynka, rumień, przebarwienia, fotoodmładzanie</td></tr>
+<tr class="grp"><td colspan="2">Światło szerokopasmowe: naczynka, rumień, przebarwienia, fotoodmładzanie</td></tr>
 <tr><td>Próba światłem (bez usuwania zmiany)</td><td class="price num">49 zł</td></tr>
 <tr><td>Próba światłem (z usunięciem pojedynczej zmiany)</td><td class="price num">149 zł</td></tr>
-<tr><td>Veloce – Cała twarz<span class="sub">pakiet 3 zabiegów: 1&nbsp;349 zł · pakiet 6 zabiegów: 2&nbsp;389 zł</span></td><td class="price num">499 zł</td></tr>
-<tr><td>Veloce – Czoło<span class="sub">pakiet 3 zabiegów: 669 zł · pakiet 6 zabiegów: 1&nbsp;189 zł</span></td><td class="price num">249 zł</td></tr>
-<tr><td>Veloce – Policzki<span class="sub">pakiet 3 zabiegów: 939 zł · pakiet 6 zabiegów: 1&nbsp;669 zł</span></td><td class="price num">349 zł</td></tr>
-<tr><td>Veloce – Nos<span class="sub">pakiet 3 zabiegów: od 669 do 809 zł · pakiet 6 zabiegów: od 1&nbsp;189 do 1&nbsp;429 zł</span></td><td class="price num">od 249 do 299 zł</td></tr>
-<tr><td>Veloce – Broda<span class="sub">pakiet 3 zabiegów: od 669 do 809 zł · pakiet 6 zabiegów: od 1&nbsp;189 do 1&nbsp;429 zł</span></td><td class="price num">249 zł</td></tr>
-<tr><td>Veloce – Szyja<span class="sub">pakiet 3 zabiegów: 1&nbsp;349 zł · pakiet 6 zabiegów: 2&nbsp;389 zł</span></td><td class="price num">499 zł</td></tr>
-<tr><td>Veloce – Dekolt<span class="sub">pakiet 3 zabiegów: 1&nbsp;349 zł · pakiet 6 zabiegów: 2&nbsp;389 zł</span></td><td class="price num">499 zł</td></tr>
-<tr><td>Veloce – Szyja + dekolt<span class="sub">pakiet 3 zabiegów: 2&nbsp;019 zł · pakiet 6 zabiegów: 3&nbsp;589 zł</span></td><td class="price num">749 zł</td></tr>
-<tr><td>Veloce – Twarz + szyja + dekolt<span class="sub">pakiet 3 zabiegów: 2&nbsp;699 zł · pakiet 6 zabiegów: 4&nbsp;789 zł</span></td><td class="price num">999 zł</td></tr>
-<tr><td>Veloce – Plecy<span class="sub">pakiet 3 zabiegów: 2&nbsp;699 zł · pakiet 6 zabiegów: 4&nbsp;789 zł</span></td><td class="price num">999 zł</td></tr>
-<tr><td>Veloce – Ramiona<span class="sub">pakiet 3 zabiegów: 1&nbsp;349 zł · pakiet 6 zabiegów: 2&nbsp;389 zł</span></td><td class="price num">499 zł</td></tr>
-<tr><td>Veloce – Przedramiona<span class="sub">pakiet 3 zabiegów: 669 zł · pakiet 6 zabiegów: 1&nbsp;189 zł</span></td><td class="price num">249 zł</td></tr>
+<tr><td>Światło szerokopasmowe – Cała twarz<span class="sub">pakiet 3 zabiegów: 1&nbsp;349 zł · pakiet 6 zabiegów: 2&nbsp;389 zł</span></td><td class="price num">499 zł</td></tr>
+<tr><td>Światło szerokopasmowe – Czoło<span class="sub">pakiet 3 zabiegów: 669 zł · pakiet 6 zabiegów: 1&nbsp;189 zł</span></td><td class="price num">249 zł</td></tr>
+<tr><td>Światło szerokopasmowe – Policzki<span class="sub">pakiet 3 zabiegów: 939 zł · pakiet 6 zabiegów: 1&nbsp;669 zł</span></td><td class="price num">349 zł</td></tr>
+<tr><td>Światło szerokopasmowe – Nos<span class="sub">pakiet 3 zabiegów: od 669 do 809 zł · pakiet 6 zabiegów: od 1&nbsp;189 do 1&nbsp;429 zł</span></td><td class="price num">od 249 do 299 zł</td></tr>
+<tr><td>Światło szerokopasmowe – Broda<span class="sub">pakiet 3 zabiegów: od 669 do 809 zł · pakiet 6 zabiegów: od 1&nbsp;189 do 1&nbsp;429 zł</span></td><td class="price num">249 zł</td></tr>
+<tr><td>Światło szerokopasmowe – Szyja<span class="sub">pakiet 3 zabiegów: 1&nbsp;349 zł · pakiet 6 zabiegów: 2&nbsp;389 zł</span></td><td class="price num">499 zł</td></tr>
+<tr><td>Światło szerokopasmowe – Dekolt<span class="sub">pakiet 3 zabiegów: 1&nbsp;349 zł · pakiet 6 zabiegów: 2&nbsp;389 zł</span></td><td class="price num">499 zł</td></tr>
+<tr><td>Światło szerokopasmowe – Szyja + dekolt<span class="sub">pakiet 3 zabiegów: 2&nbsp;019 zł · pakiet 6 zabiegów: 3&nbsp;589 zł</span></td><td class="price num">749 zł</td></tr>
+<tr><td>Światło szerokopasmowe – Twarz + szyja + dekolt<span class="sub">pakiet 3 zabiegów: 2&nbsp;699 zł · pakiet 6 zabiegów: 4&nbsp;789 zł</span></td><td class="price num">999 zł</td></tr>
+<tr><td>Światło szerokopasmowe – Plecy<span class="sub">pakiet 3 zabiegów: 2&nbsp;699 zł · pakiet 6 zabiegów: 4&nbsp;789 zł</span></td><td class="price num">999 zł</td></tr>
+<tr><td>Światło szerokopasmowe – Ramiona<span class="sub">pakiet 3 zabiegów: 1&nbsp;349 zł · pakiet 6 zabiegów: 2&nbsp;389 zł</span></td><td class="price num">499 zł</td></tr>
+<tr><td>Światło szerokopasmowe – Przedramiona<span class="sub">pakiet 3 zabiegów: 669 zł · pakiet 6 zabiegów: 1&nbsp;189 zł</span></td><td class="price num">249 zł</td></tr>
 <tr class="grp"><td colspan="2">Plazma ARC – lifting</td></tr>
 <tr><td>Górna powieka – Plazma ARC</td><td class="price num">599 zł</td></tr>
 <tr><td>Powieka dolna – Plazma ARC</td><td class="price num">499 zł</td></tr>
@@ -1286,6 +1295,12 @@
         <details>
           <summary>Kreski permanentne, medycyna estetyczna, brwi i rzęsy, manicure i pedicure</summary>
           <p>Uzupełnienie makijażu permanentnego o&nbsp;kreski i&nbsp;korekty odświeżające, zabiegi medycyny estetycznej po kwalifikacji, stylizacja brwi i&nbsp;rzęs oraz manicure i&nbsp;pedicure w&nbsp;Radomiu.</p>
+          <p>Laminacja brwi u&nbsp;naszych klientek: uniesione, uczesane, naturalnie gęste. Efekt trzyma zwykle 4 do 6 tygodni.</p>
+          <div class="brwi-gal">
+            <img src="assets/brwi-laminacja1.jpg" alt="Laminacja brwi w Laser Clinic Radom, efekt u klientki" width="640" height="800" loading="lazy">
+            <img src="assets/brwi-laminacja2.jpg" alt="Laminacja brwi w Laser Clinic Radom, naturalny efekt uniesionych brwi" width="640" height="800" loading="lazy">
+            <img src="assets/brwi-laminacja3.jpg" alt="Laminacja brwi w Laser Clinic Radom, zbliżenie" width="640" height="800" loading="lazy">
+          </div>
           <div class="table-scroll" style="margin-bottom:1.2rem"><table>
             <tbody>
 <tr class="grp"><td colspan="2">MAKIJAŻ PERMANENTNY</td></tr>
@@ -1562,7 +1577,7 @@
   "name": "Laser Clinic Katarzyna Bukowska",
   "url": "https://laserclinic.radom.pl/",
   "telephone": "+48483121551",
-  "priceRange": "20 - 5000+ PLN",
+  "priceRange": "20 - 4789 PLN",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "ul. Witolda 3",
@@ -1584,7 +1599,6 @@
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Depilacja laserowa LightSheer DUET, pachy" }, "priceCurrency": "PLN", "price": "159" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "RFrax Lift, frakcyjna radiofrekwencja mikroigłowa" }, "priceCurrency": "PLN", "price": "649" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Laser tulowy" }, "priceCurrency": "PLN", "price": "1000" },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Super Veloce, światło szerokopasmowe" }, "priceCurrency": "PLN", "price": "2000" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Makijaż permanentny brwi lub ust" }, "priceCurrency": "PLN", "price": "999" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Endermologia LPG Integral" }, "priceCurrency": "PLN", "price": "169" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fotoodmładzanie światłem szerokopasmowym Veloce" }, "priceCurrency": "PLN", "price": "499" },
