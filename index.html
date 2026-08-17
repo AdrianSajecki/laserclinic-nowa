@@ -144,7 +144,8 @@
   .head-tel { font-weight: 600; font-size: .95rem; text-decoration: none; white-space: nowrap; }
   .head-tel:hover { color: var(--accent-deep); }
   .head-tel small { display: block; font-weight: 400; font-size: .72rem; color: var(--ink-3); text-align: right; }
-  @media (max-width: 720px) { .head-actions .btn { display: none; } .head-tel small { display: none; } }
+  @media (max-width: 720px) { .head-actions .btn { display: none; } .head-tel small { display: none; } .head-tel { font-size: 1rem; } }
+  @media (max-width: 380px) { .head-tel { font-size: .9rem; } }
 
   /* ---------- hero ---------- */
   .hero { padding-top: clamp(2.4rem, 5.5vw, 4.2rem); padding-bottom: clamp(2.4rem, 5.5vw, 4rem); }
@@ -406,8 +407,8 @@
   @media (max-width: 560px) { .contact dl { grid-template-columns: 1fr; } }
   .contact dt { font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; }
   .contact dd { margin: .15rem 0 0; font-size: 1rem; }
-  .contact a { color: var(--accent-deep); text-decoration: none; }
-  .contact a:hover { text-decoration: underline; }
+  .contact a:not(.btn) { color: var(--accent-deep); text-decoration: none; }
+  .contact a:not(.btn):hover { text-decoration: underline; }
 
   .callback {
     background: var(--surface);
@@ -433,7 +434,7 @@
   /* ---------- sticky mobile cta ---------- */
   .mobile-cta {
     position: fixed; inset-inline: 0; bottom: 0; z-index: 50;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
+    display: grid; grid-template-columns: 1.4fr 1fr; gap: 1px;
     background: var(--line-strong); border-top: 1px solid var(--line-strong);
   }
   .mobile-cta a { padding: .95rem; text-align: center; font-size: .95rem; font-weight: 600; text-decoration: none; }
@@ -441,6 +442,14 @@
   .mobile-cta .book { background: var(--accent); color: #FFFFFF; }
   @media (min-width: 721px) { .mobile-cta { display: none; } }
   @media (max-width: 720px) { body { padding-bottom: 3.6rem; } }
+
+  /* ---------- call dialog (desktop) ---------- */
+  .call-dialog { border: 0; padding: clamp(1.6rem, 3vw, 2.4rem); max-width: 440px; width: calc(100% - 2rem); background: var(--surface); color: var(--ink); box-shadow: 0 30px 80px -20px rgba(36,20,29,.35); border-top: 4px solid var(--accent); }
+  .call-dialog::backdrop { background: rgba(36,20,29,.45); }
+  .call-dialog h3 { margin: .35rem 0 .8rem; }
+  .call-number { display: block; font-family: var(--font-display); font-size: 2.2rem; color: var(--accent-deep); text-decoration: none; margin-bottom: .3rem; }
+  .call-dialog p { color: var(--ink-2); font-size: .95rem; margin-bottom: 1.2rem; }
+  .call-dialog .hero-cta { margin-top: .4rem; }
 
   /* ---------- todo marker ---------- */
   .todo {
@@ -481,7 +490,7 @@
       <a class="head-tel num" href="tel:+48483121551" data-cta="header-tel">tel. (48)&nbsp;312&nbsp;15&nbsp;51
         <small>pn–pt 8:00–20:00, sob 8:00–15:00</small>
       </a>
-      <a class="btn btn-primary" href="#kontakt" data-cta="header">Umów bezpłatną konsultację</a>
+      <a class="btn btn-primary" href="tel:+48483121551" data-cta="header">Umów bezpłatną konsultację</a>
       <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -495,14 +504,14 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">Radom, ul. Witolda 3 · pn–pt do 20:00, soboty do 15:00</p>
+        <p class="eyebrow">Radom, ul. Witolda 3 · czynne do 20:00</p>
         <h1>Depilacja laserowa i&nbsp;laserowe odmładzanie skóry w&nbsp;Radomiu</h1>
         <p class="hero-lead">Sprawdź na własnej skórze, jak działa laser, zanim za cokolwiek zapłacisz. Na bezpłatnej konsultacji oglądamy Twoją skórę, dobieramy urządzenie i&nbsp;robimy próbę laserową na małym fragmencie. Wychodzisz z&nbsp;planem i&nbsp;cenami na piśmie, a&nbsp;decyzję podejmujesz spokojnie w&nbsp;domu.</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#kontakt" data-cta="hero">Umów bezpłatną konsultację</a>
-          <a class="btn btn-ghost num" href="tel:+48483121551" data-cta="hero-tel">Zadzwoń: (48) 312 15 51</a>
+          <a class="btn btn-primary" href="tel:+48483121551" data-cta="hero-tel">Umów bezpłatną konsultację</a>
+          <a class="btn btn-ghost" href="#kontakt" data-cta="hero">Zostaw numer, oddzwonimy</a>
         </div>
-        <p class="hero-note">Pół godziny, zero kosztów i&nbsp;zero zobowiązań. Wychodzisz z&nbsp;konkretnym planem i&nbsp;wiesz, ile co kosztuje.</p>
+        <p class="hero-note">Przycisk łączy z&nbsp;recepcją: <a class="num" href="tel:+48483121551" style="color:var(--accent-deep);font-weight:600;text-decoration:none">48 312 15 51</a>, pn–pt 8:00–20:00, sob 8:00–15:00. Konsultacja jest bezpłatna: pół godziny, zero zobowiązań, wychodzisz z&nbsp;planem i&nbsp;cenami.</p>
       </div>
 
       <aside class="hero-card">
@@ -526,7 +535,7 @@
           </li>
         </ul>
         <p class="card-note">Płacisz przy kolejnych wizytach, nie z&nbsp;góry za cały program. A&nbsp;co dokładnie znajdzie się w&nbsp;Twoim planie, ustalamy dopiero po obejrzeniu skóry na konsultacji.</p>
-        <a class="btn btn-primary" href="#kontakt" data-cta="hero-card">Umów bezpłatną konsultację programu</a>
+        <a class="btn btn-primary" href="tel:+48483121551" data-cta="hero-card">Umów bezpłatną konsultację programu</a>
       </aside>
     </div>
   </section>
@@ -566,7 +575,7 @@
           <p>Cieniutkie igiełki wprowadzają ciepło fal radiowych dokładnie tam, gdzie skóra straciła gęstość, i&nbsp;pobudzają ją do odbudowy kolagenu od środka. Drobne zmarszczki zwykle się spłycają, a&nbsp;owal twarzy stopniowo się poprawia. Zabieg wykonujemy urządzeniem RFrax (Medica).</p>
           <p>Wybierany najczęściej przez osoby, które nie chcą wypełniaczy ani toksyny botulinowej, ale widzą, że skóra straciła sprężystość. Na utrwalone zmarszczki mimiczne skuteczniejsze bywają inne metody. Powiemy Ci o&nbsp;tym szczerze na konsultacji.</p>
           <p class="who">Zabieg wykonuje dyplomowana kosmetolożka. Zaczynamy od bezpłatnej konsultacji, na której sprawdzamy, czy ten zabieg jest dla Ciebie bezpieczny i&nbsp;czy ma sens.</p>
-          <a class="btn btn-primary" href="#kontakt" data-cta="panel-zmarszczki">Umów bezpłatną konsultację</a>
+          <a class="btn btn-primary" href="tel:+48483121551" data-cta="panel-zmarszczki">Umów bezpłatną konsultację</a>
         </div>
         <div class="concern-side">
           <div class="spec"><dt>Cena</dt><dd class="big num">649 zł <small>· pakiet 3 zabiegów: 1&nbsp;749 zł</small></dd></div>
@@ -584,7 +593,7 @@
           <p>Sprawdza się przy plamach posłonecznych i&nbsp;nierównym kolorycie po ciąży lub po lekach. Przy melasmie zawsze zaczynamy od oceny skóry na konsultacji, bo to zmiana wymagająca ostrożnego planu.</p>
           <p>Nie wykonujemy zabiegów na znamionach ani pojedynczych zmianach barwnikowych bez wcześniejszej oceny dermatologicznej. Z&nbsp;taką zmianą najpierw skierujemy Cię do dermatologa.</p>
           <p class="who">Zabieg wykonuje dyplomowana kosmetolożka. Zaczynamy od bezpłatnej konsultacji, na której sprawdzamy, czy ten zabieg jest dla Ciebie bezpieczny i&nbsp;czy ma sens.</p>
-          <a class="btn btn-primary" href="#kontakt" data-cta="panel-przebarwienia">Umów bezpłatną konsultację</a>
+          <a class="btn btn-primary" href="tel:+48483121551" data-cta="panel-przebarwienia">Umów bezpłatną konsultację</a>
         </div>
         <div class="concern-side">
           <div class="spec"><dt>Cena</dt><dd class="big num">1 000 zł <small>· w serii 800 zł</small></dd></div>
@@ -601,7 +610,7 @@
           <p>To nasz najmocniejszy zabieg na koloryt twarzy. Urządzenie ma kilka rodzajów światła i&nbsp;każdy działa na co innego, dlatego podczas jednej wizyty pracujemy naraz nad naczynkami, rumieniem, przebarwieniami i&nbsp;ogólnym kolorytem skóry. U&nbsp;większości klientek jeden zabieg Super Veloce zastępuje dwa albo trzy osobne zabiegi, czyli mniej wizyt w&nbsp;kalendarzu.</p>
           <p>Dla porównania: seria pojedynczych zabiegów na naczynka i&nbsp;osobna seria na przebarwienia to zwykle podobny albo wyższy koszt i&nbsp;o&nbsp;kilka miesięcy dłuższy plan wizyt. Przy melasmie światło może pogorszyć stan, dlatego zawsze kwalifikujemy na konsultacji.</p>
           <p class="who">Zabieg wykonuje kosmetolożka z&nbsp;certyfikatem z&nbsp;tego urządzenia. Czy Twoja skóra się do niego kwalifikuje, sprawdzimy razem na bezpłatnej konsultacji.</p>
-          <a class="btn btn-primary" href="#kontakt" data-cta="panel-naczynka">Umów bezpłatną konsultację</a>
+          <a class="btn btn-primary" href="tel:+48483121551" data-cta="panel-naczynka">Umów bezpłatną konsultację</a>
         </div>
         <div class="concern-side">
           <div class="spec"><dt>Cena</dt><dd class="big num" style="font-size:1.15rem">cena wg aktualnego cennika <small>· potwierdzamy na konsultacji</small></dd></div>
@@ -618,7 +627,7 @@
           <p>Drobne, kontrolowane nakłucia z&nbsp;ciepłem fal radiowych pobudzają skórę do przebudowy blizny od środka. Blizna zwykle stopniowo się spłaszcza i&nbsp;jaśnieje, z&nbsp;czasem przestaje też odcinać się fakturą od reszty skóry.</p>
           <p>Pracujemy zarówno na bliznach potrądzikowych na twarzy, jak i&nbsp;na rozstępach na ciele. Podana obok cena dotyczy twarzy, wycenę większych partii ciała potwierdzamy na konsultacji. Liczbę zabiegów ustalamy po obejrzeniu zmian. Blizny bywają wdzięczne, ale wymagają cierpliwości.</p>
           <p class="who">Zabieg wykonuje dyplomowana kosmetolożka. Zaczynamy od bezpłatnej konsultacji, na której sprawdzamy, czy ten zabieg jest dla Ciebie bezpieczny i&nbsp;czy ma sens.</p>
-          <a class="btn btn-primary" href="#kontakt" data-cta="panel-blizny">Umów bezpłatną konsultację</a>
+          <a class="btn btn-primary" href="tel:+48483121551" data-cta="panel-blizny">Umów bezpłatną konsultację</a>
         </div>
         <div class="concern-side">
           <div class="spec"><dt>Cena</dt><dd class="big num">649 zł <small>· pakiet 3 zabiegów: 1&nbsp;749 zł</small></dd></div>
@@ -635,7 +644,7 @@
           <p>Wiązka lasera trafia w&nbsp;mieszek włosowy w&nbsp;fazie wzrostu i&nbsp;niszczy go, więc po pełnej serii u&nbsp;większości klientek włosy przestają odrastać na długo: koniec z&nbsp;codziennym goleniem, woskiem i&nbsp;wrastającymi włoskami. Ponieważ włosy rosną w&nbsp;różnym rytmie, potrzeba kilku zabiegów rozłożonych w&nbsp;czasie. Depilację wykonujemy urządzeniem LightSheer DUET firmy Lumenis.</p>
           <p>Przed pierwszym zabiegiem robimy bezpłatną próbę laserową: patrzymy, jak reaguje Twoja skóra, i&nbsp;dobieramy parametry tak, żeby było skutecznie i&nbsp;bezpiecznie. Jeśli wybierzesz pakiet 3 albo 6 zabiegów, każdy zabieg wychodzi taniej niż pojedynczo.</p>
           <p class="who">Zabieg wykonuje dyplomowana kosmetolożka. Zaczynamy od bezpłatnej próby laserowej.</p>
-          <a class="btn btn-primary" href="#kontakt" data-cta="panel-owlosienie">Umów bezpłatną próbę laserową</a>
+          <a class="btn btn-primary" href="tel:+48483121551" data-cta="panel-owlosienie">Umów bezpłatną próbę laserową</a>
         </div>
         <div class="concern-side">
           <div class="spec"><dt>Cena od</dt><dd class="big num">119 zł <small>· pakiety 6 zabiegów: od 569 zł</small></dd></div>
@@ -651,7 +660,7 @@
           <h3>Makijaż permanentny brwi, ust i&nbsp;oczu</h3>
           <p>Zaczynamy od wizualizacji i&nbsp;geometrii: rysujemy kształt na Twojej twarzy i&nbsp;dobieramy kolor. Pigment wprowadzamy dopiero wtedy, gdy zaakceptujesz to, co widzisz w&nbsp;lustrze. W&nbsp;cenie jest też dopigmentowanie, bo pełny efekt widać po korekcie w&nbsp;czwartym lub piątym tygodniu.</p>
           <p class="who">Zabieg wykonuje certyfikowana linergistka, czyli specjalistka od makijażu permanentnego. Jeśli chcesz najpierw zobaczyć, jak efekt będzie wyglądał na Twojej twarzy, umów samą wizualizację za 99 zł. Gdy zdecydujesz się na makijaż, te 99 zł odliczamy od jego ceny.</p>
-          <a class="btn btn-primary" href="#kontakt" data-cta="panel-brwi">Umów wizualizację brwi za 99 zł</a>
+          <a class="btn btn-primary" href="tel:+48483121551" data-cta="panel-brwi">Umów wizualizację brwi za 99 zł</a>
         </div>
         <div class="concern-side">
           <div class="spec"><dt>Cena</dt><dd class="big num">999 zł <small>· brwi lub usta · kreski od 599 zł</small></dd></div>
@@ -738,7 +747,7 @@
       </div>
       <p style="margin-top:.9rem;font-size:.82rem;color:var(--ink-3)">Kwoty „osobno” to suma aktualnych cen pojedynczych zabiegów z&nbsp;naszego cennika.</p>
       <div class="price-cta">
-        <a class="btn btn-primary" href="#kontakt" data-cta="program">Umów bezpłatną konsultację programu</a>
+        <a class="btn btn-primary" href="tel:+48483121551" data-cta="program">Umów bezpłatną konsultację programu</a>
         <p>Zmarszczki, przebarwienia i&nbsp;naczynka naraz? Tak ma większość naszych klientek po 45. roku życia i&nbsp;to żaden kłopot: na konsultacji układamy jeden wspólny plan zamiast trzech osobnych serii.</p>
       </div>
     </div>
@@ -803,7 +812,7 @@
             <li>Super Veloce na naczynka, rumień i&nbsp;koloryt</li>
                       </ul>
           <div class="price-line"><b class="num">od 649 zł</b><span>za zabieg · programy od 1&nbsp;749 zł</span></div>
-          <a class="btn btn-ghost" href="#kontakt" data-cta="card-odmladzanie">Umów bezpłatną konsultację programu</a>
+          <a class="btn btn-ghost" href="tel:+48483121551" data-cta="card-odmladzanie">Umów bezpłatną konsultację programu</a>
           </div>
         </article>
         <article class="card">
@@ -817,7 +826,7 @@
             <li>zabiegi 7 i&nbsp;8, jeśli będą potrzebne, za połowę ceny</li>
           </ul>
           <div class="price-line"><b class="num">od 119 zł</b><span>za zabieg · pakiety 6 zabiegów od 569 zł</span></div>
-          <a class="btn btn-ghost" href="#kontakt" data-cta="card-depilacja">Umów bezpłatną próbę laserową</a>
+          <a class="btn btn-ghost" href="tel:+48483121551" data-cta="card-depilacja">Umów bezpłatną próbę laserową</a>
           </div>
         </article>
         <article class="card">
@@ -831,7 +840,7 @@
             <li>korekty i&nbsp;dopigmentowanie także makijażu z&nbsp;innych gabinetów</li>
           </ul>
           <div class="price-line"><b class="num">999 zł</b><span>brwi lub usta, z&nbsp;dopigmentowaniem (osobno 1&nbsp;297 zł) · kreski od 599 zł</span></div>
-          <a class="btn btn-ghost" href="#kontakt" data-cta="card-pmu">Umów wizualizację brwi za 99 zł</a>
+          <a class="btn btn-ghost" href="tel:+48483121551" data-cta="card-pmu">Umów wizualizację brwi za 99 zł</a>
           </div>
         </article>
       </div>
@@ -933,7 +942,7 @@
         </table>
       </div>
       <div class="price-cta">
-        <a class="btn btn-primary" href="#kontakt" data-cta="cennik">Umów bezpłatną konsultację</a>
+        <a class="btn btn-primary" href="tel:+48483121551" data-cta="cennik">Umów bezpłatną konsultację</a>
         <p>Nie wiesz, który wariant wybrać? Nie musisz wiedzieć, od tego jesteśmy my. Zadzwoń, na bezpłatnej konsultacji obejrzymy skórę, dobierzemy plan i&nbsp;podamy cenę na piśmie.</p>
       </div>
       <p style="margin-top:1rem;font-size:.85rem;color:var(--ink-3)">Za pakiet depilacji możesz zapłacić w&nbsp;dwóch ratach, a&nbsp;na jego wykorzystanie masz aż 18 miesięcy, więc spokojnie zmieścisz wszystkie zabiegi w&nbsp;swoim rytmie. Kwoty „osobno” to suma aktualnych cen pojedynczych zabiegów z&nbsp;naszego cennika.</p>
@@ -1419,7 +1428,7 @@
       </ol>
       <p style="margin-top:1.1rem;font-size:.9rem;color:var(--ink-3)">Tak wygląda pierwsza wizyta przed zabiegami laserowymi i&nbsp;programami odmładzania. Przy makijażu permanentnym pierwszą wizytą jest wizualizacja z&nbsp;geometrią za 99 zł, a&nbsp;kwotę odliczamy potem od ceny makijażu.</p>
       <div class="price-cta" style="margin-top:1.6rem">
-        <a class="btn btn-primary" href="#kontakt" data-cta="wizyta">Umów bezpłatną konsultację</a>
+        <a class="btn btn-primary" href="tel:+48483121551" data-cta="wizyta">Umów bezpłatną konsultację</a>
       </div>
     </div>
   </section>
@@ -1497,7 +1506,11 @@
         <p class="eyebrow">Kontakt</p>
         <h2>Umów bezpłatną konsultację w&nbsp;Radomiu, ul.&nbsp;Witolda&nbsp;3</h2>
         <p>Zadzwoń albo zostaw numer, a&nbsp;oddzwonimy. Recepcja odbiera od poniedziałku do soboty w&nbsp;godzinach pracy salonu. Konsultacja to około 30 minut: oglądamy skórę, robimy próbę laserową i&nbsp;rozpisujemy plan z&nbsp;cenami. Do niczego Cię to nie zobowiązuje.</p>
-        <a class="btn btn-primary num" href="tel:+48483121551" data-cta="kontakt-tel">Zadzwoń: (48) 312 15 51</a>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="tel:+48483121551" data-cta="kontakt-tel">Umów bezpłatną konsultację</a>
+          <a class="btn btn-ghost" href="#callback-form" data-cta="kontakt-form">Zostaw numer, oddzwonimy</a>
+        </div>
+        <p class="hours-note" id="hours-status" style="font-size:.95rem;color:var(--ink-2)"></p>
         <dl>
           <div><dt>Adres</dt><dd>ul. Witolda 3, 26-600 Radom<br><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Laser+Clinic+ul.+Witolda+3+Radom" rel="noopener" target="_blank">Wyznacz trasę w&nbsp;Google Maps</a></dd></div>
           <div><dt>Godziny otwarcia</dt><dd>pn–pt 8:00–20:00<br>sobota 8:00–15:00</dd></div>
@@ -1565,9 +1578,20 @@
   </div>
 </footer>
 
+<dialog class="call-dialog" id="call-dialog">
+  <p class="eyebrow">Bezpłatna konsultacja</p>
+  <h3>Zadzwoń do recepcji</h3>
+  <a class="call-number num" href="tel:+48483121551">48 312 15 51</a>
+  <p id="call-dialog-hours">pn–pt 8:00–20:00, sob 8:00–15:00</p>
+  <div class="hero-cta">
+    <a class="btn btn-primary" href="#callback-form" id="call-dialog-form">Zostaw numer, oddzwonimy</a>
+    <button class="btn btn-ghost" type="button" id="call-dialog-close">Zamknij</button>
+  </div>
+</dialog>
+
 <nav class="mobile-cta" aria-label="Szybki kontakt">
-  <a class="call num" href="tel:+48483121551" data-cta="sticky-tel">Zadzwoń</a>
-  <a class="book" href="#kontakt" data-cta="sticky">Konsultacja 0 zł</a>
+  <a class="book" href="tel:+48483121551" data-cta="sticky-tel">Umów bezpłatną konsultację</a>
+  <a class="call" href="#kontakt" data-cta="sticky">Zostaw numer</a>
 </nav>
 
 <script type="application/ld+json">
@@ -1648,15 +1672,36 @@
     });
   });
 
-  // CTA: na telefonie dzwoni od razu, na komputerze prowadzi do sekcji kontaktu
+  // Na komputerze link tel: nic nie robi, więc pokazujemy okienko z numerem i opcją formularza
   (function () {
-    const mobile = matchMedia("(pointer: coarse)").matches || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-    if (!mobile) return;
-    document.querySelectorAll('a[href="#kontakt"]').forEach(a => {
-      if (a.closest("nav") || a.dataset.cta === "sticky") return; // menu i pasek dolny bez zmian (pasek ma osobny "Zadzwoń")
-      a.setAttribute("href", "tel:+48483121551");
-      a.dataset.ctaMode = "tel";
+    const dlg = document.getElementById("call-dialog");
+    if (!dlg || !dlg.showModal) return;
+    const isTouch = matchMedia("(pointer: coarse)").matches || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (isTouch) return;
+    document.querySelectorAll('a[href="tel:+48483121551"]').forEach(a => {
+      if (a.closest(".call-dialog") || a.classList.contains("head-tel") || a.closest(".contact dl") || a.closest("footer")) return;
+      a.addEventListener("click", (e) => { e.preventDefault(); dlg.showModal(); });
     });
+    document.getElementById("call-dialog-close").addEventListener("click", () => dlg.close());
+    document.getElementById("call-dialog-form").addEventListener("click", () => dlg.close());
+    dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
+    const now = new Date(); const d = now.getDay(); const h = now.getHours() + now.getMinutes() / 60;
+    const open = (d >= 1 && d <= 5 && h >= 8 && h < 20) || (d === 6 && h >= 8 && h < 15);
+    if (!open) document.getElementById("call-dialog-hours").textContent = "Teraz recepcja nie odbiera (pn–pt 8:00–20:00, sob 8:00–15:00). Zostaw numer, oddzwonimy zaraz po otwarciu.";
+  })();
+
+  // Godziny pracy: poza nimi mówimy wprost, kiedy recepcja odbierze, i kierujemy do formularza
+  (function () {
+    const now = new Date(); const d = now.getDay(); const h = now.getHours() + now.getMinutes() / 60;
+    const open = (d >= 1 && d <= 5 && h >= 8 && h < 20) || (d === 6 && h >= 8 && h < 15);
+    const st = document.getElementById("hours-status");
+    if (!st) return;
+    if (open) { st.textContent = "Recepcja odbiera teraz. Zadzwoń, umówimy Cię od ręki."; }
+    else {
+      const next = (d === 6 && h >= 15) || d === 0 ? "w poniedziałek od 8:00" : (d === 5 && h >= 20 ? "w sobotę od 8:00" : "jutro od 8:00");
+      st.textContent = "Recepcja odbiera " + next + ". Zostaw numer, oddzwonimy zaraz po otwarciu.";
+      const f = document.getElementById("callback-form"); if (f) f.style.boxShadow = "0 0 0 3px var(--accent-tint), var(--shadow)";
+    }
   })();
 
   // Menu mobilne
