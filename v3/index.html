@@ -373,6 +373,9 @@
   .badges li + li::before { content: " · "; color: var(--gold); }
   .devices { display: grid; gap: 1rem .9rem; grid-template-columns: repeat(2, 1fr); margin: 0; padding: 0; list-style: none; }
   @media (min-width: 700px) { .devices { grid-template-columns: repeat(3, 1fr); gap: 1.3rem 1.1rem; } }
+  .devices-wrap { margin-top: clamp(2.6rem, 5vw, 4rem); padding-top: clamp(2rem, 4vw, 3rem); border-top: 1px solid var(--line); }
+  .devices-wrap > p { margin-top: 1.2rem; max-width: 70ch; }
+  @media (min-width: 1000px) { .devices-wrap .devices { grid-template-columns: repeat(6, 1fr); gap: 1.2rem 1rem; } .devices-wrap .devices li b { font-size: .9rem; } }
   .devices li { display: flex; flex-direction: column; gap: .12rem; font-size: .92rem; position: relative; padding-top: .7rem; }
   .devices li::before { content: ""; position: absolute; left: 0; top: 0; height: 2px; width: 100%; background: var(--accent); }
   .dev-img { display: block; aspect-ratio: 4 / 5; background: var(--surface-2); box-shadow: 0 0 0 1px var(--line), 0 18px 30px -24px rgba(51,25,42,.35); margin: .1rem 0 .55rem; overflow: hidden; }
@@ -1080,16 +1083,7 @@
           <li>endermologia</li>
         </ul>
         </details>
-        <p>Na czym pracujemy? Piszemy konkretnie, bo przy zabiegach za kilkaset złotych masz prawo wiedzieć:</p>
-        <ul class="devices" data-reveal-group>
-          <li><span class="dev-img"><picture><source type="image/webp" srcset="assets/dev/lightsheer-duet.webp"><img src="assets/dev/lightsheer-duet.png" width="640" height="800" alt="Laser LightSheer DUET firmy Lumenis" loading="lazy" decoding="async"></picture></span><b>LightSheer DUET (Lumenis)</b><span>depilacja laserowa</span></li>
-          <li><span class="dev-img"><picture><source type="image/webp" srcset="assets/dev/rfrax.webp"><img src="assets/dev/rfrax.png" width="640" height="800" alt="RFrax, frakcyjna radiofrekwencja mikroigłowa" loading="lazy" decoding="async"></picture></span><b>RFrax (Medica)</b><span>frakcyjna radiofrekwencja mikroigłowa</span></li>
-          <li><span class="dev-img"><picture><source type="image/webp" srcset="assets/dev/super-veloce.webp"><img src="assets/dev/super-veloce.png" width="640" height="800" alt="Super Veloce, światło szerokopasmowe" loading="lazy" decoding="async"></picture></span><b>Super Veloce</b><span>światło szerokopasmowe</span></li>
-          <li><span class="dev-img"><picture><source type="image/webp" srcset="assets/dev/lpg-integral.webp"><img src="assets/dev/lpg-integral.png" width="640" height="800" alt="LPG Cellu M6 Integral, endermologia" loading="lazy" decoding="async"></picture></span><b>LPG Integral</b><span>endermologia</span></li>
-          <li><span class="dev-img"><picture><source type="image/webp" srcset="assets/dev/storz.webp"><img src="assets/dev/storz.png" width="640" height="800" alt="Storz Medical, fala uderzeniowa" loading="lazy" decoding="async"></picture></span><b>Storz Medical</b><span>fala uderzeniowa</span></li>
-          <li><span class="dev-img photo"><picture><source type="image/webp" srcset="assets/dev/vitalift.webp"><img src="assets/dev/vitalift.jpg" width="640" height="800" alt="Vitalift, zabieg ujędrniający w Laser Clinic" loading="lazy" decoding="async"></picture></span><b>Vitalift</b><span>ujędrnianie twarzy i&nbsp;ciała</span></li>
-        </ul>
-        <p style="font-size:.9rem;color:var(--ink-3)">Depilację laserową LightSheer, światło szerokopasmowe Veloce, Vitalift i&nbsp;falę uderzeniową Storz wykonujemy na certyfikowanych wyrobach medycznych. Certyfikaty pokażemy Ci na miejscu. Zdjęcia urządzeń pochodzą z&nbsp;materiałów producentów.</p>
+
       </div>
     </div>
     <div class="wrap">
@@ -1099,6 +1093,18 @@
         <figure class="person" style="margin:0"><span class="ph"><picture><source type="image/webp" srcset="assets/wioleta.webp"><img src="assets/wioleta.jpg" alt="Wioleta Niewiadomska, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"></picture></span><b>Wioleta Niewiadomska</b><span>kosmetolożka</span></figure>
         <figure class="person" style="margin:0"><span class="ph"><picture><source type="image/webp" srcset="assets/agata.webp"><img style="--pos:50% 30%" src="assets/agata.jpg" alt="Agata Romanowska, kosmetolożka i pielęgniarka Laser Clinic Radom" width="520" height="640" loading="lazy"></picture></span><b>Agata Romanowska</b><span>kosmetolożka i&nbsp;pielęgniarka</span></figure>
       </div>
+    </div>
+    <div class="wrap devices-wrap">
+        <div class="section-head" data-reveal style="margin-bottom:1.4rem"><p class="eyebrow">Sprzęt</p><h3 style="font-size:clamp(1.4rem,2.4vw,1.9rem)">Na czym pracujemy? Piszemy konkretnie, bo przy zabiegach za kilkaset złotych masz prawo wiedzieć</h3></div>
+        <ul class="devices" data-reveal-group>
+          <li><span class="dev-img"><picture><source type="image/webp" srcset="assets/dev/lightsheer-duet.webp"><img src="assets/dev/lightsheer-duet.png" width="640" height="800" alt="Laser LightSheer DUET firmy Lumenis" loading="lazy" decoding="async"></picture></span><b>LightSheer DUET (Lumenis)</b><span>depilacja laserowa</span></li>
+          <li><span class="dev-img"><picture><source type="image/webp" srcset="assets/dev/rfrax.webp"><img src="assets/dev/rfrax.png" width="640" height="800" alt="RFrax, frakcyjna radiofrekwencja mikroigłowa" loading="lazy" decoding="async"></picture></span><b>RFrax (Medica)</b><span>frakcyjna radiofrekwencja mikroigłowa</span></li>
+          <li><span class="dev-img"><picture><source type="image/webp" srcset="assets/dev/super-veloce.webp"><img src="assets/dev/super-veloce.png" width="640" height="800" alt="Super Veloce, światło szerokopasmowe" loading="lazy" decoding="async"></picture></span><b>Super Veloce</b><span>światło szerokopasmowe</span></li>
+          <li><span class="dev-img"><picture><source type="image/webp" srcset="assets/dev/lpg-integral.webp"><img src="assets/dev/lpg-integral.png" width="640" height="800" alt="LPG Cellu M6 Integral, endermologia" loading="lazy" decoding="async"></picture></span><b>LPG Integral</b><span>endermologia</span></li>
+          <li><span class="dev-img"><picture><source type="image/webp" srcset="assets/dev/storz.webp"><img src="assets/dev/storz.png" width="640" height="800" alt="Storz Medical, fala uderzeniowa" loading="lazy" decoding="async"></picture></span><b>Storz Medical</b><span>fala uderzeniowa</span></li>
+          <li><span class="dev-img photo"><picture><source type="image/webp" srcset="assets/dev/vitalift.webp"><img src="assets/dev/vitalift.jpg" width="640" height="800" alt="Vitalift, zabieg ujędrniający w Laser Clinic" loading="lazy" decoding="async"></picture></span><b>Vitalift</b><span>ujędrnianie twarzy i&nbsp;ciała</span></li>
+        </ul>
+        <p style="font-size:.9rem;color:var(--ink-3)">Depilację laserową LightSheer, światło szerokopasmowe Veloce, Vitalift i&nbsp;falę uderzeniową Storz wykonujemy na certyfikowanych wyrobach medycznych. Certyfikaty pokażemy Ci na miejscu. Zdjęcia urządzeń pochodzą z&nbsp;materiałów producentów.</p>
     </div>
   </section>
 
