@@ -203,13 +203,13 @@
   .hero-card .sheen { position: absolute; inset: 0; z-index: 0; pointer-events: none; background: linear-gradient(115deg, transparent 40%, rgba(255,255,255,.14) 50%, transparent 60%); transform: translateX(-130%); }
   .owner { display: flex; gap: .9rem; align-items: flex-start; }
   .owner img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid var(--plum-accent); box-shadow: 0 0 0 3px rgba(236,85,165,.25); }
-  .hero-proof { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, auto); justify-content: start; gap: 1.2rem; font-size: .84rem; color: var(--ink-2); }
-  @media (max-width: 420px) { .hero-proof { grid-template-columns: repeat(2, auto); gap: .9rem 2rem; } .hero-proof li:nth-child(odd) { border-left: 0; padding-left: 0; } }
+  .hero-proof { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); width: 100%; gap: 0; font-size: .84rem; color: var(--ink-2); border-block: 1px solid var(--line); }
+  @media (max-width: 420px) { .hero-proof { grid-template-columns: repeat(2, 1fr); } .hero-proof li:nth-child(odd) { border-left: 0; } .hero-proof li:nth-child(n+3) { border-top: 1px solid var(--line); } }
   @media (max-width: 720px) { .hero-cta, .hero-cta .btn { width: 100%; } .price-cta .btn, .callback .btn, .concern-panel .btn, .card .btn { width: 100%; } .btn-primary { min-height: 56px; } .callback .btn { align-self: stretch !important; } }
   @media (max-width: 480px) { .hero { padding-top: 1.6rem; } .hero-copy { gap: 1rem; } .hero-lead { font-size: .98rem; line-height: 1.55; } }
-  .hero-proof li { display: flex; flex-direction: column; gap: .05rem; }
-  .hero-proof li + li { border-left: 1px solid var(--line); padding-left: 1.2rem; }
-  .hero-proof b { font-family: var(--font-display); font-weight: 400; font-size: 1.35rem; line-height: 1.1; color: var(--ink); }
+  .hero-proof li { display: flex; flex-direction: column; gap: .05rem; align-items: center; text-align: center; padding: .7rem .25rem; }
+  .hero-proof li + li { border-left: 1px solid var(--line); }
+  .hero-proof b { font-family: var(--font-display); font-weight: 400; font-size: 1.4rem; line-height: 1.1; color: var(--ink); }
   @media (min-width: 940px) { .hero-proof { display: none; } }
   @media (max-width: 939px) { .hero-card { margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); } .hero { overflow-x: clip; } }
   .hero-card h2 { color: var(--plum-ink); font-size: 1.5rem; }
