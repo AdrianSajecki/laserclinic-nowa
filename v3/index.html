@@ -629,9 +629,8 @@
   .mobile-cta .book { background: var(--accent); color: #FFFFFF; }
   .mobile-cta .book svg { flex: none; }
   .mobile-cta .book span { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.2; }
-  .mobile-cta .book b { font-size: 1.02rem; font-weight: 700; letter-spacing: .01em; white-space: nowrap; }
+  .mobile-cta .book b { font-size: 1.12rem; font-weight: 700; letter-spacing: .02em; white-space: nowrap; }
   .mobile-cta .call { padding-inline: 1.1rem; }
-  @media (max-width: 400px) { .mobile-cta .book b .pre { display: none; } }
   .mobile-cta .book small { font-size: .8rem; opacity: .95; font-weight: 400; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
   .mobile-cta .book span { min-width: 0; }
   @media (min-width: 721px) { .mobile-cta { display: none; } }
@@ -1935,7 +1934,7 @@
 </dialog>
 
 <nav class="mobile-cta" id="mobile-cta" aria-label="Szybki kontakt">
-  <a class="book" href="tel:+48483121551" data-cta="sticky-tel"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1z"/></svg><span><b class="num"><span class="pre">Zadzwoń: </span>48&nbsp;312&nbsp;15&nbsp;51</b><small id="sticky-hours">bezpłatna konsultacja</small></span></a>
+  <a class="book" href="tel:+48483121551" data-cta="sticky-tel"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1z"/></svg><span><b class="num">48&nbsp;312&nbsp;15&nbsp;51</b><small id="sticky-hours">recepcja: pn‑pt 8:00-20:00, sob 8:00-15:00</small></span></a>
   <a class="call" href="#cennik">Cennik</a>
 </nav>
 <button class="to-top" id="to-top" type="button" aria-label="Do góry">↑</button>
@@ -2071,7 +2070,7 @@
       const s = state();
       if (s.open) {
         if (st) st.textContent = "Recepcja odbiera teraz. Zadzwoń, umówimy Cię od ręki.";
-        if (sticky) sticky.textContent = "odbieramy teraz · konsultacja 0 zł";
+        if (sticky) sticky.textContent = "odbieramy teraz";
         if (cd) cd.textContent = "pn‑pt 8:00-20:00, sob 8:00-15:00";
         if (call && callHref) { call.setAttribute("href", callHref); call.textContent = callText; }
       } else {
