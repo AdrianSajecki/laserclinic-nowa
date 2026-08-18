@@ -205,7 +205,7 @@
   .owner img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex: none; border: 2px solid var(--plum-accent); box-shadow: 0 0 0 3px rgba(236,85,165,.25); }
   .hero-proof { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, auto); justify-content: start; gap: 1.2rem; font-size: .84rem; color: var(--ink-2); }
   @media (max-width: 420px) { .hero-proof { grid-template-columns: repeat(2, auto); gap: .9rem 2rem; } .hero-proof li:nth-child(odd) { border-left: 0; padding-left: 0; } }
-  @media (max-width: 720px) { .hero-cta, .hero-cta .btn { width: 100%; } }
+  @media (max-width: 720px) { .hero-cta, .hero-cta .btn { width: 100%; } .price-cta .btn, .callback .btn, .concern-panel .btn, .card .btn { width: 100%; } .btn-primary { min-height: 56px; } .callback .btn { align-self: stretch !important; } }
   @media (max-width: 480px) { .hero { padding-top: 1.6rem; } .hero-copy { gap: 1rem; } .hero-lead { font-size: .98rem; line-height: 1.55; } }
   .hero-proof li { display: flex; flex-direction: column; gap: .05rem; }
   .hero-proof li + li { border-left: 1px solid var(--line); padding-left: 1.2rem; }
@@ -2050,26 +2050,40 @@
     const origShow = dlg.showModal.bind(dlg);
     dlg.showModal = () => { origShow(); const b = document.getElementById("call-dialog-tel"); if (b) b.focus(); };
     dlg.addEventListener("click", (e) => { if (e.target === dlg) closeDlg(); });
-    const now = new Date(); const d = now.getDay(); const h = now.getHours() + now.getMinutes() / 60;
-    const open = (d >= 1 && d <= 5 && h >= 8 && h < 20) || (d === 6 && h >= 8 && h < 15);
-    if (!open) document.getElementById("call-dialog-hours").textContent = "Teraz recepcja nie odbiera. Zadzwoń pn‑pt 8:00-20:00 albo w sobotę 8:00-15:00.";
   })();
 
-  // Godziny pracy: poza nimi mówimy wprost, kiedy recepcja odbierze, i kierujemy do formularza
+  // Godziny pracy: jedna funkcja dla paska, kontaktu i okienka telefonu; liczona na bieżąco (co minutę)
   (function () {
-    const now = new Date(); const d = now.getDay(); const h = now.getHours() + now.getMinutes() / 60;
-    const open = (d >= 1 && d <= 5 && h >= 8 && h < 20) || (d === 6 && h >= 8 && h < 15);
-    const st = document.getElementById("hours-status");
-    if (!st) return;
-    const sticky = document.getElementById("sticky-hours");
-    if (open) { st.textContent = "Recepcja odbiera teraz. Zadzwoń, umówimy Cię od ręki."; if (sticky) sticky.textContent = "odbieramy teraz · konsultacja 0 zł"; }
-    else {
-      const next = (d === 6 && h >= 15) || d === 0 ? "w poniedziałek od 8:00" : (d === 5 && h >= 20 ? "w sobotę od 8:00" : "jutro od 8:00");
-      st.textContent = "Recepcja odbiera " + next + ". Zapisz sobie numer i zadzwoń po otwarciu.";
-      if (sticky) sticky.textContent = "odbieramy " + next;
-      const call = document.querySelector(".mobile-cta .call");
-      if (call && matchMedia("(pointer: coarse)").matches) { call.href = "sms:+48533310316?&body=" + encodeURIComponent("Dzień dobry, proszę o kontakt w sprawie bezpłatnej konsultacji. Imię: "); call.textContent = "Napisz SMS"; }
+    const st = document.getElementById("hours-status"), sticky = document.getElementById("sticky-hours"), cd = document.getElementById("call-dialog-hours"), call = document.querySelector(".mobile-cta .call");
+    const coarse = matchMedia("(pointer: coarse)").matches;
+    const callHref = call ? call.getAttribute("href") : null, callText = call ? call.textContent : null;
+    function state() {
+      const now = new Date(), d = now.getDay(), h = now.getHours() + now.getMinutes() / 60;
+      const open = (d >= 1 && d <= 5 && h >= 8 && h < 20) || (d === 6 && h >= 8 && h < 15);
+      let next;
+      if (open) next = null;
+      else if (d >= 1 && d <= 6 && h < 8) next = "dziś od 8:00";
+      else if (d === 0 || (d === 6 && h >= 15)) next = "w poniedziałek od 8:00";
+      else if (d === 5 && h >= 20) next = "w sobotę od 8:00";
+      else next = "jutro od 8:00";
+      return { open, next };
     }
+    function render() {
+      const s = state();
+      if (s.open) {
+        if (st) st.textContent = "Recepcja odbiera teraz. Zadzwoń, umówimy Cię od ręki.";
+        if (sticky) sticky.textContent = "odbieramy teraz · konsultacja 0 zł";
+        if (cd) cd.textContent = "pn‑pt 8:00-20:00, sob 8:00-15:00";
+        if (call && callHref) { call.setAttribute("href", callHref); call.textContent = callText; }
+      } else {
+        if (st) st.textContent = "Recepcja odbiera " + s.next + ". Zapisz sobie numer i zadzwoń po otwarciu.";
+        if (sticky) sticky.textContent = "odbieramy " + s.next;
+        if (cd) cd.textContent = "Teraz recepcja nie odbiera. Zadzwoń " + s.next + " (pn‑pt 8:00-20:00, sob 8:00-15:00).";
+        if (call && coarse) { call.setAttribute("href", "sms:+48533310316?&body=" + encodeURIComponent("Dzień dobry, proszę o kontakt w sprawie bezpłatnej konsultacji. Imię: ")); call.textContent = "Napisz SMS"; }
+      }
+    }
+    render(); setInterval(render, 60000);
+    document.addEventListener("visibilitychange", () => { if (!document.hidden) render(); });
   })();
 
   // Menu mobilne
