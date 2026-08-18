@@ -617,7 +617,7 @@
   /* ---------- sticky mobile cta ---------- */
   .mobile-cta {
     position: fixed; inset-inline: 0; bottom: 0; z-index: 50;
-    display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1px;
+    display: grid; grid-template-columns: 1fr; gap: 0;
     background: var(--line-strong); border-top: 1px solid var(--line-strong);
     transform: translateY(100%); visibility: hidden; transition: transform .45s var(--ease-out), box-shadow .45s, visibility 0s .45s;
   }
@@ -629,7 +629,8 @@
   .mobile-cta .book { background: var(--accent); color: #FFFFFF; }
   .mobile-cta .book svg { flex: none; }
   .mobile-cta .book span { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.2; }
-  .mobile-cta .book b { font-size: 1.12rem; font-weight: 700; letter-spacing: .02em; white-space: nowrap; }
+  .mobile-cta .book { justify-content: center; gap: .7rem; }
+  .mobile-cta .book b { font-size: 1.1rem; font-weight: 700; letter-spacing: .01em; white-space: nowrap; }
   .mobile-cta .call { padding-inline: 1.1rem; }
   .mobile-cta .book small { font-size: .8rem; opacity: .95; font-weight: 400; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
   .mobile-cta .book span { min-width: 0; }
@@ -1934,8 +1935,7 @@
 </dialog>
 
 <nav class="mobile-cta" id="mobile-cta" aria-label="Szybki kontakt">
-  <a class="book" href="tel:+48483121551" data-cta="sticky-tel"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1z"/></svg><span><b class="num">48&nbsp;312&nbsp;15&nbsp;51</b><small id="sticky-hours">recepcja: pn‑pt 8:00-20:00, sob 8:00-15:00</small></span></a>
-  <a class="call" href="#cennik">Cennik</a>
+  <a class="book" href="tel:+48483121551" data-cta="sticky-tel"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1z"/></svg><span><b class="num">Zadzwoń: 48&nbsp;312&nbsp;15&nbsp;51</b><small id="sticky-hours">recepcja: pn‑pt 8:00-20:00, sob 8:00-15:00</small></span></a>
 </nav>
 <button class="to-top" id="to-top" type="button" aria-label="Do góry">↑</button>
 <dialog class="fx-dialog" id="fx-dialog" aria-label="Powiększone zdjęcie">
@@ -2052,9 +2052,7 @@
 
   // Godziny pracy: jedna funkcja dla paska, kontaktu i okienka telefonu; liczona na bieżąco (co minutę)
   (function () {
-    const st = document.getElementById("hours-status"), sticky = document.getElementById("sticky-hours"), cd = document.getElementById("call-dialog-hours"), call = document.querySelector(".mobile-cta .call");
-    const coarse = matchMedia("(pointer: coarse)").matches;
-    const callHref = call ? call.getAttribute("href") : null, callText = call ? call.textContent : null;
+    const st = document.getElementById("hours-status"), sticky = document.getElementById("sticky-hours"), cd = document.getElementById("call-dialog-hours");
     function state() {
       const now = new Date(), d = now.getDay(), h = now.getHours() + now.getMinutes() / 60;
       const open = (d >= 1 && d <= 5 && h >= 8 && h < 20) || (d === 6 && h >= 8 && h < 15);
@@ -2072,12 +2070,10 @@
         if (st) st.textContent = "Recepcja odbiera teraz. Zadzwoń, umówimy Cię od ręki.";
         if (sticky) sticky.textContent = "odbieramy teraz";
         if (cd) cd.textContent = "pn‑pt 8:00-20:00, sob 8:00-15:00";
-        if (call && callHref) { call.setAttribute("href", callHref); call.textContent = callText; }
       } else {
         if (st) st.textContent = "Recepcja odbiera " + s.next + ". Zapisz sobie numer i zadzwoń po otwarciu.";
         if (sticky) sticky.textContent = "odbieramy " + s.next;
         if (cd) cd.textContent = "Teraz recepcja nie odbiera. Zadzwoń " + s.next + " (pn‑pt 8:00-20:00, sob 8:00-15:00).";
-        if (call && coarse) { call.setAttribute("href", "sms:+48533310316?&body=" + encodeURIComponent("Dzień dobry, proszę o kontakt w sprawie bezpłatnej konsultacji. Imię: ")); call.textContent = "Napisz SMS"; }
       }
     }
     render(); setInterval(render, 60000);
