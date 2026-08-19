@@ -357,15 +357,15 @@
   .portrait { position: relative; z-index: 1; width: 100%; height: auto; aspect-ratio: 5 / 6; object-fit: cover; object-position: 50% 30%; display: block; box-shadow: var(--shadow); }
   @media (max-width: 719px) { .portrait { max-height: 46vh; object-position: 50% 15%; } }
   .team-people { display: grid; gap: 1.15rem; grid-template-columns: repeat(2, 1fr); margin-top: clamp(2rem, 4vw, 2.8rem); }
-  @media (min-width: 720px) { .team-people { grid-template-columns: repeat(3, minmax(0, 260px)); justify-content: start; } }
-  @media (min-width: 880px) { .team-people { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 720px) { .team-people { grid-template-columns: repeat(4, minmax(0, 230px)); justify-content: start; } }
+  @media (min-width: 880px) { .team-people { grid-template-columns: repeat(4, 1fr); } }
   .person { display: flex; flex-direction: column; gap: .45rem; }
   .person .ph { display: block; overflow: hidden; box-shadow: var(--shadow); position: relative; }
   .person img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: var(--pos, 50% 18%); display: block; filter: saturate(.94); }
   .person b { font-family: var(--font-display); font-weight: 400; font-size: 1.1rem; margin-top: .3rem; }
   @media (max-width: 719px) { .person b { font-family: var(--font-body); font-weight: 600; font-size: .92rem; } .portrait { max-height: 52vh; } }
   .person span { font-size: .78rem; color: var(--ink-3); text-transform: uppercase; letter-spacing: .08em; }
-  @media (max-width: 719px) { .team-people { grid-template-columns: repeat(3, 1fr); gap: .7rem; } .person span { font-size: .72rem; letter-spacing: .06em; } }
+  @media (max-width: 719px) { .team-people { grid-template-columns: repeat(2, 1fr); gap: .8rem; } .person span { font-size: .72rem; letter-spacing: .06em; } }
   .team-copy { display: flex; flex-direction: column; gap: 1.1rem; }
   .team-copy p { color: var(--ink-2); }
   .badges { display: block; margin: 0; padding: 0; list-style: none; font-size: .92rem; color: var(--ink-2); line-height: 1.8; }
@@ -1071,7 +1071,8 @@
       <div class="team-copy" data-reveal>
         <p class="eyebrow">Zespół</p>
         <h2>Kto będzie się Tobą zajmować</h2>
-        <p>Laser Clinic prowadzi osobiście <strong>Katarzyna Bukowska</strong>: kosmetolożka z&nbsp;praktyką od 2012 roku i&nbsp;certyfikatami z&nbsp;każdego urządzenia, na którym pracuje. Do tego studiuje pielęgniarstwo, bo przy pracy na skórze podstawy medyczne po prostu się przydają. Na co dzień pracuje u&nbsp;nas siedem kosmetolożek z&nbsp;certyfikatami, a&nbsp;w&nbsp;zespole jest także dyplomowana pielęgniarka, Agata Romanowska. Wolumetrię, modelowanie ust i&nbsp;BTX wykonuje osobiście Katarzyna, a&nbsp;osocze i&nbsp;fibrynę Agata, która pobiera krew na miejscu w&nbsp;gabinecie.</p>
+        <p>Laser Clinic prowadzi osobiście <strong>Katarzyna Bukowska</strong>: kosmetolożka z&nbsp;praktyką od 2012 roku i&nbsp;certyfikatami z&nbsp;każdego urządzenia, na którym pracuje. Do tego studiuje pielęgniarstwo, bo przy pracy na skórze podstawy medyczne po prostu się przydają. Na co dzień pracuje u&nbsp;nas siedem kosmetolożek z&nbsp;certyfikatami, a&nbsp;w&nbsp;zespole jest także dyplomowana pielęgniarka, Agata Romanowska.</p>
+        <p>Wolumetrię, modelowanie ust i&nbsp;BTX wykonuje osobiście Katarzyna, a&nbsp;osocze i&nbsp;fibrynę Agata, która pobiera krew na miejscu w&nbsp;gabinecie. Makijaż permanentny brwi i&nbsp;ust robi u&nbsp;nas także Karolina Wasiak, kosmetolożka i&nbsp;linergistka.</p>
         <details class="more"><summary>Certyfikaty i&nbsp;techniki zespołu</summary>
         <p>Każda osoba wykonująca zabiegi ma certyfikaty z&nbsp;obsługiwanych urządzeń i&nbsp;technik:</p>
         <ul class="badges">
@@ -1093,6 +1094,7 @@
         <figure class="person" style="margin:0"><span class="ph"><picture><source type="image/webp" srcset="assets/magdalena.webp?v=d7bbcc"><img style="--pos:50% 8%" src="assets/magdalena.jpg?v=f44d80" alt="Magdalena Szczepińska, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"></picture></span><b>Magdalena Szczepińska</b><span>kosmetolożka</span></figure>
         <figure class="person" style="margin:0"><span class="ph"><picture><source type="image/webp" srcset="assets/wioleta.webp?v=629d08"><img src="assets/wioleta.jpg?v=945d93" alt="Wioleta Niewiadomska, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"></picture></span><b>Wioleta Niewiadomska</b><span>kosmetolożka</span></figure>
         <figure class="person" style="margin:0"><span class="ph"><picture><source type="image/webp" srcset="assets/agata.webp?v=1a2df7"><img style="--pos:50% 30%" src="assets/agata.jpg?v=65cf5f" alt="Agata Romanowska, kosmetolożka i pielęgniarka Laser Clinic Radom" width="520" height="640" loading="lazy"></picture></span><b>Agata Romanowska</b><span>kosmetolożka i&nbsp;pielęgniarka</span></figure>
+        <figure class="person" style="margin:0"><span class="ph"><picture><source type="image/webp" srcset="assets/karolina.webp?v=3c5139"><img src="assets/karolina.jpg?v=9d672c" alt="Karolina Wasiak, kosmetolożka i linergistka Laser Clinic Radom" width="520" height="640" loading="lazy"></picture></span><b>Karolina Wasiak</b><span>kosmetolożka i&nbsp;linergistka</span></figure>
       </div>
     </div>
     <div class="wrap devices-wrap">
