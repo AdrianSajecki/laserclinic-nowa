@@ -360,8 +360,8 @@
   .portrait { position: relative; z-index: 1; width: 100%; height: auto; aspect-ratio: 5 / 6; object-fit: cover; object-position: 50% 30%; display: block; box-shadow: var(--shadow); }
   @media (max-width: 719px) { .portrait { max-height: 46vh; object-position: 50% 15%; } }
   .team-people { display: grid; gap: 1.15rem; grid-template-columns: repeat(2, 1fr); margin-top: clamp(2rem, 4vw, 2.8rem); }
-  @media (min-width: 720px) { .team-people { grid-template-columns: repeat(4, minmax(0, 230px)); justify-content: start; } }
-  @media (min-width: 880px) { .team-people { grid-template-columns: repeat(4, 1fr); } }
+  @media (min-width: 720px) { .team-people { grid-template-columns: repeat(3, minmax(0, 230px)); justify-content: start; } }
+  @media (min-width: 1000px) { .team-people { grid-template-columns: repeat(5, 1fr); } }
   .person { display: flex; flex-direction: column; gap: .45rem; }
   .person .ph { display: block; overflow: hidden; box-shadow: var(--shadow); position: relative; }
   .person img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: var(--pos, 50% 18%); display: block; filter: saturate(.94); }
@@ -1102,8 +1102,9 @@
         <!-- do uzupełnienia: zdjęcia pozostałych kosmetolożek od Kasi -->
         <figure class="person" style="margin:0"><span class="ph"><picture><source type="image/webp" srcset="assets/magdalena.webp?v=d7bbcc"><img style="--pos:50% 8%" src="assets/magdalena.jpg?v=f44d80" alt="Magdalena Szczepińska, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"></picture></span><b>Magdalena Szczepińska</b><span>kosmetolożka</span></figure>
         <figure class="person" style="margin:0"><span class="ph"><picture><source type="image/webp" srcset="assets/wioleta.webp?v=629d08"><img src="assets/wioleta.jpg?v=945d93" alt="Wioleta Niewiadomska, kosmetolożka Laser Clinic Radom" width="520" height="640" loading="lazy"></picture></span><b>Wioleta Niewiadomska</b><span>kosmetolożka</span></figure>
-        <figure class="person" style="margin:0"><span class="ph"><picture><source type="image/webp" srcset="assets/agata.webp?v=1a2df7"><img style="--pos:50% 30%" src="assets/agata.jpg?v=65cf5f" alt="Agata Romanowska, kosmetolożka i pielęgniarka Laser Clinic Radom" width="520" height="640" loading="lazy"></picture></span><b>Agata Romanowska</b><span>kosmetolożka i&nbsp;pielęgniarka</span></figure>
+        <figure class="person" style="margin:0"><span class="ph"><picture><source type="image/webp" srcset="assets/agata.webp?v=e8adef"><img src="assets/agata.jpg?v=b50e2f" alt="Agata Romanowska, kosmetolożka i pielęgniarka Laser Clinic Radom" width="520" height="640" loading="lazy"></picture></span><b>Agata Romanowska</b><span>kosmetolożka i&nbsp;pielęgniarka</span></figure>
         <figure class="person" style="margin:0"><span class="ph"><picture><source type="image/webp" srcset="assets/karolina.webp?v=3c5139"><img src="assets/karolina.jpg?v=9d672c" alt="Karolina Wasiak, kosmetolożka i linergistka Laser Clinic Radom" width="520" height="640" loading="lazy"></picture></span><b>Karolina Wasiak</b><span>kosmetolożka i&nbsp;linergistka</span></figure>
+        <figure class="person" style="margin:0"><span class="ph"><picture><source type="image/webp" srcset="assets/angelika.webp?v=ac947d"><img src="assets/angelika.jpg?v=194232" alt="Angelika Budzik, kosmetyczka i stylistka brwi, recepcja Laser Clinic Radom" width="520" height="640" loading="lazy"></picture></span><b>Angelika Budzik</b><span>kosmetyczka, stylistka brwi, recepcja</span></figure>
       </div>
     </div>
     <div class="wrap devices-wrap">
