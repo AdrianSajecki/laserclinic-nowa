@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /kontakt.php
+Disallow: /kontakt-config.php
+
+Sitemap: https://laserclinic.radom.pl/sitemap.xml
