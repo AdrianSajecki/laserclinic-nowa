@@ -756,6 +756,8 @@
 .podstrona .powiazane a { display: block; padding: .95rem .2rem; text-decoration: none; color: var(--ink); font-weight: 600; font-size: .98rem; transition: color .18s, padding-left .18s; }
 .podstrona .powiazane a:hover { color: var(--accent-deep); padding-left: .4rem; }
 .podstrona .table-scroll { margin-bottom: .9rem; }
+.podstrona td.price { min-width: 13rem; }
+@media (max-width: 640px) { .podstrona td.price { min-width: 0; } }
 .podstrona .small-note { font-size: .87rem; color: var(--ink-3); }
 .podstrona .small-note a { color: var(--accent-deep); }
 @media (max-width: 640px) { .cta-row .btn { width: 100%; } }
