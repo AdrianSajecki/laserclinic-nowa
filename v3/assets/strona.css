@@ -544,6 +544,10 @@
   #pelna-oferta .faq summary { padding-right: 7rem; padding-block: 1.3rem; }
   .narrow .visit-list, .narrow .faq, .narrow .season, .narrow .visit-note { max-width: 820px; }
   .faq details > p { padding-bottom: 1.35rem; color: var(--ink-2); font-size: .97rem; }
+  .faq details > p.list-lead { padding-bottom: .55rem; }
+  .faq details > ul.marks { list-style: none; margin: 0 0 1.1rem; padding: 0; display: grid; gap: .5rem; color: var(--ink-2); font-size: .97rem; line-height: 1.45; }
+  .faq details > ul.marks li { position: relative; padding-left: 1.4rem; }
+  .faq details > ul.marks li::before { content: ""; position: absolute; left: 0; top: .62em; width: .5rem; height: .5rem; border-radius: 50%; background: var(--gold); }
   .season {
     margin-top: 1.6rem; padding: 1.2rem 1.4rem;
     background: var(--accent-tint); border-left: 3px solid var(--accent);
